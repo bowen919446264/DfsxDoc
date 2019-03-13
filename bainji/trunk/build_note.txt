@@ -1,0 +1,6 @@
+1.使用bash 命令 进入 
+cd F:/WORK/Android_SPACE/Lib/xedit/trunk/script
+
+2.执行下面命令 
+bash buildAll.sh --include-dirs="F:/WORK/Android_SPACE/Lib/xedit/dependency/libav/include F:/WORK/Android_SPACE/Lib/xedit/dependency/XEdit/include F:/WORK/Android_SPACE/Lib/xedit/dependency/NLEPro/trunk/dlls/DsNleLib/inc F:/WORK/Android_SPACE/Lib/xedit/dependency/NLEPro/trunk/dlls/DsNleLib/android/dsnlecore/include F:/WORK/Android_SPACE/Lib/xedit/dependency/NLEPro/trunk/dlls/DsNleLib/linux/dsnlengine" --lib-dirs="F:/WORK/Android_SPACE/Lib/xedit/dependency/libav/lib F:/WORK/Android_SPACE/Lib/xedit/dependency/XEdit/lib F:/WORK/Android_SPACE/Lib/xedit/dependency/NLEPro/trunk/dlls/DsNleLib/linux/lib"
+

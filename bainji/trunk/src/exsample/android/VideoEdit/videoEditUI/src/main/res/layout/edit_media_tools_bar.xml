@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <ImageView
+        android:id="@+id/img_add_media"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_add_white" />
+
+    <ImageView
+        android:id="@+id/img_play_media"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_img_play_white" />
+
+    <ImageButton
+        android:id="@+id/img_back_action"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:minWidth="25dp"
+        android:layout_toLeftOf="@+id/img_unback_action"
+        android:background="@color/transparent"
+        android:layout_marginRight="7dp"
+        android:clickable="false"
+        android:scaleType="center"
+        android:src="@drawable/back_selector" />
+
+    <ImageButton
+        android:id="@+id/img_unback_action"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent"
+        android:minWidth="25dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:scaleType="center"
+        android:src="@drawable/unback_selector" />
+</RelativeLayout>

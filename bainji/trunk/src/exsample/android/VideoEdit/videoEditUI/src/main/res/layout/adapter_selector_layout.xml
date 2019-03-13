@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.dfsx.core.common.view.RectangleRelativeLayout
+        android:id="@+id/item_thumb_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ratio="1">
+
+        <ImageView
+            android:id="@+id/item_thumb_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/item_tv_selector_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:text="00:00:00"
+            android:textSize="10dp"
+            android:textColor="@color/white"/>
+    </com.dfsx.core.common.view.RectangleRelativeLayout>
+</LinearLayout>

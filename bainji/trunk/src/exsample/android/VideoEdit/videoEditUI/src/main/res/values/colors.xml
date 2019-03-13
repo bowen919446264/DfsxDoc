@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#353535</color>
+    <color name="colorPrimaryDark">#353535</color>
+    <color name="colorAccent">#353535</color>
+
+    <color name="black_38">#383838</color>
+
+    <color name="public_bkg">#242424</color>
+    <color name="dark_title_bar_bkg">#353535</color>
+</resources>

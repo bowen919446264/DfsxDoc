@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <root-path
+        name="root_path"
+        path="."/>
+    <files-path
+        name="dfsx_output_videos_path"
+        path="videoEdit/"/>
+    <external-path
+        name="dfsx_output_videos"
+        path="videoEdit/videoRecord/"/>
+</paths>

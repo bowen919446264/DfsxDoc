@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/openProjectBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onOpenProject"
+                    android:text="打开工程" />
+
+                <Button
+                    android:id="@+id/closeProjectBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onCloseProject"
+                    android:text="关闭当前工程" />
+
+                <Button
+                    android:id="@+id/saveProjectBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onSaveProject"
+                    android:text="保存工程" />
+
+                <Button
+                    android:id="@+id/newProjectBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onNewProject"
+                    android:text="新建工程" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/addImageMediaBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddImage"
+                    android:layout_weight="1"
+                    android:text="引入图片" />
+
+                <Button
+                    android:id="@+id/addVideoMediaBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddVideo"
+                    android:layout_weight="1"
+                    android:text="引入视频" />
+
+                <Button
+                    android:id="@+id/addClipBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onAddClip"
+                    android:layout_weight="1"
+                    android:text="创建切片" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/setClipOffsetBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSetClipOffset"
+                    android:layout_weight="1"
+                    android:text="设置切片在时间线上的偏移量" />
+
+                <Button
+                    android:id="@+id/setClipDurationBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSetClipDuration"
+                    android:layout_weight="1"
+                    android:text="设置切片时长" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/setAVClipOffsetInMediaBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSetAVClipOffsetInMedia"
+                    android:text="设置切片在文件内的偏移量" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/createVideoTrackBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCreateVideoTrack"
+                    android:text="创建视频轨道" />
+
+                <Button
+                    android:id="@+id/createAudioTrackBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCreateAudioTrack"
+                    android:text="创建音频轨道" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                android:id="@+id/playBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPlay"
+                android:text="播放" />
+
+                <Button
+                    android:id="@+id/pauseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onPause"
+                    android:text="暂停" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/generateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGenerate"
+                    android:text="时间线生成" />
+
+                <Button
+                    android:id="@+id/cancelGenerateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCancelGenerate"
+                    android:text="取消生成" />
+
+                <TextView
+                    android:id="@+id/currentFrameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/" />
+
+                <TextView
+                    android:id="@+id/totalFramesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+            </TableRow>
+
+        </TableLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/surfaceViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainTable"
+            android:layout_marginTop="10dp">
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <SeekBar
+            android:id="@+id/playProcessBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/surfaceViewLayout"
+            android:max="100"
+            android:progress="0" />
+
+        <Button
+            android:id="@+id/unDoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="onUnDo"
+            android:text="撤销" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

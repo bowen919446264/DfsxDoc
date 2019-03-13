@@ -1,0 +1,1082 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46DCB9DF7741E788CD199100 /* libPods-XEdit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1535C7FDFCA4BA9B09497D /* libPods-XEdit.a */; };
+		600713912235FA2F00FF0285 /* XEditOutputType.m in Sources */ = {isa = PBXBuildFile; fileRef = 600713902235FA2F00FF0285 /* XEditOutputType.m */; };
+		600713932236127300FF0285 /* XEditProjectOutputProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600713922236127300FF0285 /* XEditProjectOutputProgressView.xib */; };
+		60071396223634AA00FF0285 /* XEditProjectOutputProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60071395223634AA00FF0285 /* XEditProjectOutputProgressView.m */; };
+		6007139A22363D4800FF0285 /* XEditGenerateObserver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 6007139822363C4200FF0285 /* XEditGenerateObserver.hpp */; };
+		6007139D223758FB00FF0285 /* XEditProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007139C223758FB00FF0285 /* XEditProject.m */; };
+		600713A12237637E00FF0285 /* ImagePlugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6007139E2237637D00FF0285 /* ImagePlugs.framework */; };
+		600713A22237637E00FF0285 /* ImagePlugs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6007139E2237637D00FF0285 /* ImagePlugs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		600713A32237637E00FF0285 /* DsDecoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6007139F2237637D00FF0285 /* DsDecoder.framework */; };
+		600713A42237637E00FF0285 /* DsDecoder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6007139F2237637D00FF0285 /* DsDecoder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		600713A52237637E00FF0285 /* DsNlEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600713A02237637E00FF0285 /* DsNlEngine.framework */; };
+		600713A62237637E00FF0285 /* DsNlEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 600713A02237637E00FF0285 /* DsNlEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6018F1ED221A5D3900092A0A /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6018F1EB221A5D3900092A0A /* libboost_filesystem.a */; };
+		6018F1EE221A5D3900092A0A /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6018F1EC221A5D3900092A0A /* libboost_system.a */; };
+		6018F216221A610300092A0A /* UIAlertController+XEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6018F215221A610300092A0A /* UIAlertController+XEdit.m */; };
+		601AFC73222FE73F00843A83 /* XEditVideoClipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601AFC71222FE73F00843A83 /* XEditVideoClipView.xib */; };
+		601AFC74222FE73F00843A83 /* XEditVideoClipView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 601AFC72222FE73F00843A83 /* XEditVideoClipView.mm */; };
+		602B20E422154B2B00DE70E3 /* libxengine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20E12215424200DE70E3 /* libxengine.a */; };
+		602B20E522154B2B00DE70E3 /* libxutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20E02215424200DE70E3 /* libxutil.a */; };
+		602B20EE22166CCF00DE70E3 /* libxml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20ED22166CCF00DE70E3 /* libxml2.a */; };
+		602B20F022166D2E00DE70E3 /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20EF22166D2E00DE70E3 /* libpthread.tbd */; };
+		602B20F222166D3700DE70E3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20F122166D3700DE70E3 /* libz.tbd */; };
+		602B20F422166D3E00DE70E3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20F322166D3E00DE70E3 /* libiconv.tbd */; };
+		602B20F622166D4C00DE70E3 /* libm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20F522166D4C00DE70E3 /* libm.tbd */; };
+		605B8DD6222792AC00E0E39A /* libavpub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 605B8DD5222792AC00E0E39A /* libavpub.a */; };
+		605B8DD72227AD7600E0E39A /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 602B20F922166E2200DE70E3 /* libfreeimage.a */; };
+		605B8DDA2227D2FA00E0E39A /* XEditTimelineCutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605B8DD92227D2FA00E0E39A /* XEditTimelineCutView.m */; };
+		605B8DDC2227D31300E0E39A /* XEditTimelineCutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B8DDB2227D31300E0E39A /* XEditTimelineCutView.xib */; };
+		605B8DDE2227E17400E0E39A /* XEditTimelineVolumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605B8DDD2227E17400E0E39A /* XEditTimelineVolumeView.xib */; };
+		605B8DE12227E19700E0E39A /* XEditTimelineVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605B8DE02227E19700E0E39A /* XEditTimelineVolumeView.m */; };
+		607ED90D211148A6007A71C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED90C211148A6007A71C8 /* AppDelegate.m */; };
+		607ED913211148A6007A71C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607ED911211148A6007A71C8 /* Main.storyboard */; };
+		607ED915211148A7007A71C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607ED914211148A7007A71C8 /* Assets.xcassets */; };
+		607ED918211148A7007A71C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607ED916211148A7007A71C8 /* LaunchScreen.storyboard */; };
+		607ED91B211148A7007A71C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED91A211148A7007A71C8 /* main.m */; };
+		607ED925211148A7007A71C8 /* XEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED924211148A7007A71C8 /* XEditTests.m */; };
+		607ED930211148A7007A71C8 /* XEditUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED92F211148A7007A71C8 /* XEditUITests.m */; };
+		607ED93F21114B5A007A71C8 /* XEditMainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607ED93E21114B5A007A71C8 /* XEditMainViewController.mm */; };
+		607ED94721115234007A71C8 /* XEditCreateProjectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED94521115234007A71C8 /* XEditCreateProjectCollectionViewCell.m */; };
+		607ED94821115234007A71C8 /* XEditCreateProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607ED94621115234007A71C8 /* XEditCreateProjectCollectionViewCell.xib */; };
+		607ED94C21115302007A71C8 /* XEditProjectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED94A21115302007A71C8 /* XEditProjectCollectionViewCell.m */; };
+		607ED94D21115302007A71C8 /* XEditProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607ED94B21115302007A71C8 /* XEditProjectCollectionViewCell.xib */; };
+		607ED95121115760007A71C8 /* XEditUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED95021115760007A71C8 /* XEditUtils.m */; };
+		607ED955211163A6007A71C8 /* XEditProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607ED954211163A6007A71C8 /* XEditProject.storyboard */; };
+		607ED95821118828007A71C8 /* XEditProjectDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607ED95721118828007A71C8 /* XEditProjectDetailViewController.mm */; };
+		607ED95C21118B59007A71C8 /* NSBundle+XEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED95B21118B59007A71C8 /* NSBundle+XEdit.m */; };
+		607ED96221118F75007A71C8 /* XEditBundleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED96121118F75007A71C8 /* XEditBundleClass.m */; };
+		607ED9652111970B007A71C8 /* UINavigationBar+XEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED9642111970B007A71C8 /* UINavigationBar+XEdit.m */; };
+		607ED96921119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED96821119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.m */; };
+		607ED96C2111A1BC007A71C8 /* XEditTimelineViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607ED96B2111A1BC007A71C8 /* XEditTimelineViewController.mm */; };
+		607ED96F2111A7BE007A71C8 /* UIView+XEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED96E2111A7BE007A71C8 /* UIView+XEdit.m */; };
+		607ED97D2112D3DA007A71C8 /* XEditProjectOutputViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607ED97C2112D3DA007A71C8 /* XEditProjectOutputViewController.mm */; };
+		607ED9812112D64E007A71C8 /* XEditProjectOutputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED97F2112D64E007A71C8 /* XEditProjectOutputTableViewCell.m */; };
+		607ED9822112D64E007A71C8 /* XEditProjectOutputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607ED9802112D64E007A71C8 /* XEditProjectOutputTableViewCell.xib */; };
+		607ED9862112E5B7007A71C8 /* XEditVideoTrackTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607ED9842112E5B7007A71C8 /* XEditVideoTrackTableViewCell.mm */; };
+		607ED9872112E5B7007A71C8 /* XEditVideoTrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607ED9852112E5B7007A71C8 /* XEditVideoTrackTableViewCell.xib */; };
+		607ED9A42114052E007A71C8 /* XEditPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 607ED9A32114052E007A71C8 /* XEditPanGestureRecognizer.m */; };
+		60B8C3F52117FCD00047CEA0 /* XEditExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C3F42117FCD00047CEA0 /* XEditExtern.m */; };
+		60B8C3F821182ACE0047CEA0 /* XEditMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8C3F721182ACE0047CEA0 /* XEditMainNavigationController.m */; };
+		60CE09FA221FDBE700370DC0 /* XEditTimelineObserver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CE09F9221FDBE700370DC0 /* XEditTimelineObserver.hpp */; };
+		60CE09FC221FDC4100370DC0 /* XEditVideoRenderer.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CE09FB221FDC4100370DC0 /* XEditVideoRenderer.hpp */; };
+		60CE09FF221FFF0200370DC0 /* SKGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CE09FD221FFF0100370DC0 /* SKGLKView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		607ED921211148A7007A71C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607ED900211148A6007A71C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607ED907211148A6007A71C8;
+			remoteInfo = XEdit;
+		};
+		607ED92C211148A7007A71C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607ED900211148A6007A71C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607ED907211148A6007A71C8;
+			remoteInfo = XEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		600713A72237637E00FF0285 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				600713A42237637E00FF0285 /* DsDecoder.framework in Embed Frameworks */,
+				600713A22237637E00FF0285 /* ImagePlugs.framework in Embed Frameworks */,
+				600713A62237637E00FF0285 /* DsNlEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B1535C7FDFCA4BA9B09497D /* libPods-XEdit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XEdit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6007138F2235FA2F00FF0285 /* XEditOutputType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditOutputType.h; sourceTree = "<group>"; };
+		600713902235FA2F00FF0285 /* XEditOutputType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditOutputType.m; sourceTree = "<group>"; };
+		600713922236127300FF0285 /* XEditProjectOutputProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditProjectOutputProgressView.xib; sourceTree = "<group>"; };
+		60071394223634AA00FF0285 /* XEditProjectOutputProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProjectOutputProgressView.h; sourceTree = "<group>"; };
+		60071395223634AA00FF0285 /* XEditProjectOutputProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditProjectOutputProgressView.m; sourceTree = "<group>"; };
+		6007139822363C4200FF0285 /* XEditGenerateObserver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = XEditGenerateObserver.hpp; sourceTree = "<group>"; };
+		6007139B223758FB00FF0285 /* XEditProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProject.h; sourceTree = "<group>"; };
+		6007139C223758FB00FF0285 /* XEditProject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditProject.m; sourceTree = "<group>"; };
+		6007139E2237637D00FF0285 /* ImagePlugs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImagePlugs.framework; sourceTree = "<group>"; };
+		6007139F2237637D00FF0285 /* DsDecoder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DsDecoder.framework; sourceTree = "<group>"; };
+		600713A02237637E00FF0285 /* DsNlEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DsNlEngine.framework; sourceTree = "<group>"; };
+		6018F1EB221A5D3900092A0A /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "../../../../third-part/lib/iOS/Debug/arm64/libboost_filesystem.a"; sourceTree = "<group>"; };
+		6018F1EC221A5D3900092A0A /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = "../../../../third-part/lib/iOS/Debug/arm64/libboost_system.a"; sourceTree = "<group>"; };
+		6018F214221A610300092A0A /* UIAlertController+XEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+XEdit.h"; sourceTree = "<group>"; };
+		6018F215221A610300092A0A /* UIAlertController+XEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+XEdit.m"; sourceTree = "<group>"; };
+		601AFC70222FE73F00843A83 /* XEditVideoClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEditVideoClipView.h; sourceTree = "<group>"; };
+		601AFC71222FE73F00843A83 /* XEditVideoClipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XEditVideoClipView.xib; sourceTree = "<group>"; };
+		601AFC72222FE73F00843A83 /* XEditVideoClipView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditVideoClipView.mm; sourceTree = "<group>"; };
+		602B20E02215424200DE70E3 /* libxutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxutil.a; path = ../../../../lib/iOS/Debug/libxutil.a; sourceTree = "<group>"; };
+		602B20E12215424200DE70E3 /* libxengine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxengine.a; path = ../../../../lib/iOS/Debug/libxengine.a; sourceTree = "<group>"; };
+		602B20ED22166CCF00DE70E3 /* libxml2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxml2.a; path = "../../../../third-part/lib/iOS/Debug/libxml2.a"; sourceTree = "<group>"; };
+		602B20EF22166D2E00DE70E3 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		602B20F122166D3700DE70E3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		602B20F322166D3E00DE70E3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		602B20F522166D4C00DE70E3 /* libm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libm.tbd; path = usr/lib/libm.tbd; sourceTree = SDKROOT; };
+		602B20F922166E2200DE70E3 /* libfreeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeimage.a; path = "../../../../third-part/lib/iOS/Debug/libfreeimage.a"; sourceTree = "<group>"; };
+		605B8DD5222792AC00E0E39A /* libavpub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavpub.a; path = "../../../../third-part/lib/iOS/Debug/arm64/libavpub.a"; sourceTree = "<group>"; };
+		605B8DD82227D2FA00E0E39A /* XEditTimelineCutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditTimelineCutView.h; sourceTree = "<group>"; };
+		605B8DD92227D2FA00E0E39A /* XEditTimelineCutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditTimelineCutView.m; sourceTree = "<group>"; };
+		605B8DDB2227D31300E0E39A /* XEditTimelineCutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditTimelineCutView.xib; sourceTree = "<group>"; };
+		605B8DDD2227E17400E0E39A /* XEditTimelineVolumeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditTimelineVolumeView.xib; sourceTree = "<group>"; };
+		605B8DDF2227E19700E0E39A /* XEditTimelineVolumeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditTimelineVolumeView.h; sourceTree = "<group>"; };
+		605B8DE02227E19700E0E39A /* XEditTimelineVolumeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditTimelineVolumeView.m; sourceTree = "<group>"; };
+		607ED908211148A6007A71C8 /* XEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607ED90B211148A6007A71C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		607ED90C211148A6007A71C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		607ED912211148A6007A71C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607ED914211148A7007A71C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		607ED917211148A7007A71C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		607ED919211148A7007A71C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607ED91A211148A7007A71C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		607ED920211148A7007A71C8 /* XEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607ED924211148A7007A71C8 /* XEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditTests.m; sourceTree = "<group>"; };
+		607ED926211148A7007A71C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607ED92B211148A7007A71C8 /* XEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607ED92F211148A7007A71C8 /* XEditUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditUITests.m; sourceTree = "<group>"; };
+		607ED931211148A8007A71C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607ED93D21114B5A007A71C8 /* XEditMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditMainViewController.h; sourceTree = "<group>"; };
+		607ED93E21114B5A007A71C8 /* XEditMainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditMainViewController.mm; sourceTree = "<group>"; };
+		607ED94421115234007A71C8 /* XEditCreateProjectCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditCreateProjectCollectionViewCell.h; sourceTree = "<group>"; };
+		607ED94521115234007A71C8 /* XEditCreateProjectCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditCreateProjectCollectionViewCell.m; sourceTree = "<group>"; };
+		607ED94621115234007A71C8 /* XEditCreateProjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditCreateProjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		607ED94921115302007A71C8 /* XEditProjectCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProjectCollectionViewCell.h; sourceTree = "<group>"; };
+		607ED94A21115302007A71C8 /* XEditProjectCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditProjectCollectionViewCell.m; sourceTree = "<group>"; };
+		607ED94B21115302007A71C8 /* XEditProjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditProjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		607ED94F21115760007A71C8 /* XEditUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditUtils.h; sourceTree = "<group>"; };
+		607ED95021115760007A71C8 /* XEditUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditUtils.m; sourceTree = "<group>"; };
+		607ED952211157BD007A71C8 /* XEditDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditDefine.h; sourceTree = "<group>"; };
+		607ED95321115867007A71C8 /* XEdit-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XEdit-PrefixHeader.pch"; sourceTree = "<group>"; };
+		607ED954211163A6007A71C8 /* XEditProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XEditProject.storyboard; sourceTree = "<group>"; };
+		607ED95621118828007A71C8 /* XEditProjectDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProjectDetailViewController.h; sourceTree = "<group>"; };
+		607ED95721118828007A71C8 /* XEditProjectDetailViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditProjectDetailViewController.mm; sourceTree = "<group>"; };
+		607ED95A21118B59007A71C8 /* NSBundle+XEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XEdit.h"; sourceTree = "<group>"; };
+		607ED95B21118B59007A71C8 /* NSBundle+XEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XEdit.m"; sourceTree = "<group>"; };
+		607ED96021118F75007A71C8 /* XEditBundleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditBundleClass.h; sourceTree = "<group>"; };
+		607ED96121118F75007A71C8 /* XEditBundleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditBundleClass.m; sourceTree = "<group>"; };
+		607ED9632111970B007A71C8 /* UINavigationBar+XEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+XEdit.h"; sourceTree = "<group>"; };
+		607ED9642111970B007A71C8 /* UINavigationBar+XEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+XEdit.m"; sourceTree = "<group>"; };
+		607ED96721119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditTimelineTotalTimeCollectionViewCell.h; sourceTree = "<group>"; };
+		607ED96821119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditTimelineTotalTimeCollectionViewCell.m; sourceTree = "<group>"; };
+		607ED96A2111A1BC007A71C8 /* XEditTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditTimelineViewController.h; sourceTree = "<group>"; };
+		607ED96B2111A1BC007A71C8 /* XEditTimelineViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditTimelineViewController.mm; sourceTree = "<group>"; };
+		607ED96D2111A7BE007A71C8 /* UIView+XEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XEdit.h"; sourceTree = "<group>"; };
+		607ED96E2111A7BE007A71C8 /* UIView+XEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XEdit.m"; sourceTree = "<group>"; };
+		607ED97B2112D3DA007A71C8 /* XEditProjectOutputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProjectOutputViewController.h; sourceTree = "<group>"; };
+		607ED97C2112D3DA007A71C8 /* XEditProjectOutputViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditProjectOutputViewController.mm; sourceTree = "<group>"; };
+		607ED97E2112D64E007A71C8 /* XEditProjectOutputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditProjectOutputTableViewCell.h; sourceTree = "<group>"; };
+		607ED97F2112D64E007A71C8 /* XEditProjectOutputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditProjectOutputTableViewCell.m; sourceTree = "<group>"; };
+		607ED9802112D64E007A71C8 /* XEditProjectOutputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditProjectOutputTableViewCell.xib; sourceTree = "<group>"; };
+		607ED9832112E5B7007A71C8 /* XEditVideoTrackTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditVideoTrackTableViewCell.h; sourceTree = "<group>"; };
+		607ED9842112E5B7007A71C8 /* XEditVideoTrackTableViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XEditVideoTrackTableViewCell.mm; sourceTree = "<group>"; };
+		607ED9852112E5B7007A71C8 /* XEditVideoTrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XEditVideoTrackTableViewCell.xib; sourceTree = "<group>"; };
+		607ED9A22114052E007A71C8 /* XEditPanGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditPanGestureRecognizer.h; sourceTree = "<group>"; };
+		607ED9A32114052E007A71C8 /* XEditPanGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditPanGestureRecognizer.m; sourceTree = "<group>"; };
+		60B8C3F32117FCD00047CEA0 /* XEditExtern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditExtern.h; sourceTree = "<group>"; };
+		60B8C3F42117FCD00047CEA0 /* XEditExtern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditExtern.m; sourceTree = "<group>"; };
+		60B8C3F621182ACE0047CEA0 /* XEditMainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEditMainNavigationController.h; sourceTree = "<group>"; };
+		60B8C3F721182ACE0047CEA0 /* XEditMainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEditMainNavigationController.m; sourceTree = "<group>"; };
+		60CE09F9221FDBE700370DC0 /* XEditTimelineObserver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = XEditTimelineObserver.hpp; sourceTree = "<group>"; };
+		60CE09FB221FDC4100370DC0 /* XEditVideoRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = XEditVideoRenderer.hpp; sourceTree = "<group>"; };
+		60CE09FD221FFF0100370DC0 /* SKGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKGLKView.m; sourceTree = "<group>"; };
+		60CE09FE221FFF0100370DC0 /* SKGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKGLKView.h; sourceTree = "<group>"; };
+		ACBA969231BFCE0D82ADA2CF /* Pods-XEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XEdit/Pods-XEdit.debug.xcconfig"; sourceTree = "<group>"; };
+		C90103843DEE914005AE3532 /* Pods-XEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-XEdit/Pods-XEdit.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607ED905211148A6007A71C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605B8DD72227AD7600E0E39A /* libfreeimage.a in Frameworks */,
+				605B8DD6222792AC00E0E39A /* libavpub.a in Frameworks */,
+				600713A32237637E00FF0285 /* DsDecoder.framework in Frameworks */,
+				6018F1ED221A5D3900092A0A /* libboost_filesystem.a in Frameworks */,
+				6018F1EE221A5D3900092A0A /* libboost_system.a in Frameworks */,
+				600713A12237637E00FF0285 /* ImagePlugs.framework in Frameworks */,
+				602B20F622166D4C00DE70E3 /* libm.tbd in Frameworks */,
+				602B20F422166D3E00DE70E3 /* libiconv.tbd in Frameworks */,
+				600713A52237637E00FF0285 /* DsNlEngine.framework in Frameworks */,
+				602B20F222166D3700DE70E3 /* libz.tbd in Frameworks */,
+				602B20F022166D2E00DE70E3 /* libpthread.tbd in Frameworks */,
+				602B20EE22166CCF00DE70E3 /* libxml2.a in Frameworks */,
+				602B20E422154B2B00DE70E3 /* libxengine.a in Frameworks */,
+				602B20E522154B2B00DE70E3 /* libxutil.a in Frameworks */,
+				46DCB9DF7741E788CD199100 /* libPods-XEdit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED91D211148A7007A71C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED928211148A7007A71C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		601AFC6F222FE73F00843A83 /* Clip */ = {
+			isa = PBXGroup;
+			children = (
+				601AFC70222FE73F00843A83 /* XEditVideoClipView.h */,
+				601AFC72222FE73F00843A83 /* XEditVideoClipView.mm */,
+				601AFC71222FE73F00843A83 /* XEditVideoClipView.xib */,
+			);
+			path = Clip;
+			sourceTree = "<group>";
+		};
+		607ED8FF211148A6007A71C8 = {
+			isa = PBXGroup;
+			children = (
+				6007139F2237637D00FF0285 /* DsDecoder.framework */,
+				600713A02237637E00FF0285 /* DsNlEngine.framework */,
+				6007139E2237637D00FF0285 /* ImagePlugs.framework */,
+				607ED90A211148A6007A71C8 /* XEdit */,
+				607ED923211148A7007A71C8 /* XEditTests */,
+				607ED92E211148A7007A71C8 /* XEditUITests */,
+				607ED909211148A6007A71C8 /* Products */,
+				E29001878BE25980336C267B /* Pods */,
+				E5A0C5E8E50A6B03D2674C90 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607ED909211148A6007A71C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607ED908211148A6007A71C8 /* XEdit.app */,
+				607ED920211148A7007A71C8 /* XEditTests.xctest */,
+				607ED92B211148A7007A71C8 /* XEditUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607ED90A211148A6007A71C8 /* XEdit */ = {
+			isa = PBXGroup;
+			children = (
+				607ED943211151DD007A71C8 /* Main */,
+				607ED942211151DD007A71C8 /* Project */,
+				607ED94121115194007A71C8 /* Resources */,
+				607ED9762112AE50007A71C8 /* Model */,
+				607ED94E211156E7007A71C8 /* Utils */,
+				607ED94021115170007A71C8 /* SupportedFiles */,
+			);
+			path = XEdit;
+			sourceTree = "<group>";
+		};
+		607ED923211148A7007A71C8 /* XEditTests */ = {
+			isa = PBXGroup;
+			children = (
+				607ED924211148A7007A71C8 /* XEditTests.m */,
+				607ED926211148A7007A71C8 /* Info.plist */,
+			);
+			path = XEditTests;
+			sourceTree = "<group>";
+		};
+		607ED92E211148A7007A71C8 /* XEditUITests */ = {
+			isa = PBXGroup;
+			children = (
+				607ED92F211148A7007A71C8 /* XEditUITests.m */,
+				607ED931211148A8007A71C8 /* Info.plist */,
+			);
+			path = XEditUITests;
+			sourceTree = "<group>";
+		};
+		607ED94021115170007A71C8 /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				607ED90B211148A6007A71C8 /* AppDelegate.h */,
+				607ED90C211148A6007A71C8 /* AppDelegate.m */,
+				607ED919211148A7007A71C8 /* Info.plist */,
+				607ED91A211148A7007A71C8 /* main.m */,
+				607ED916211148A7007A71C8 /* LaunchScreen.storyboard */,
+				607ED95321115867007A71C8 /* XEdit-PrefixHeader.pch */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		607ED94121115194007A71C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				607ED914211148A7007A71C8 /* Assets.xcassets */,
+				607ED96021118F75007A71C8 /* XEditBundleClass.h */,
+				607ED96121118F75007A71C8 /* XEditBundleClass.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		607ED942211151DD007A71C8 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				607ED96621119F4E007A71C8 /* Timeline */,
+				607ED95621118828007A71C8 /* XEditProjectDetailViewController.h */,
+				607ED95721118828007A71C8 /* XEditProjectDetailViewController.mm */,
+				607ED97B2112D3DA007A71C8 /* XEditProjectOutputViewController.h */,
+				607ED97C2112D3DA007A71C8 /* XEditProjectOutputViewController.mm */,
+				607ED97E2112D64E007A71C8 /* XEditProjectOutputTableViewCell.h */,
+				607ED97F2112D64E007A71C8 /* XEditProjectOutputTableViewCell.m */,
+				607ED9802112D64E007A71C8 /* XEditProjectOutputTableViewCell.xib */,
+				60071394223634AA00FF0285 /* XEditProjectOutputProgressView.h */,
+				60071395223634AA00FF0285 /* XEditProjectOutputProgressView.m */,
+				600713922236127300FF0285 /* XEditProjectOutputProgressView.xib */,
+				6007139822363C4200FF0285 /* XEditGenerateObserver.hpp */,
+				607ED954211163A6007A71C8 /* XEditProject.storyboard */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		607ED943211151DD007A71C8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				60B8C3F621182ACE0047CEA0 /* XEditMainNavigationController.h */,
+				60B8C3F721182ACE0047CEA0 /* XEditMainNavigationController.m */,
+				607ED93D21114B5A007A71C8 /* XEditMainViewController.h */,
+				607ED93E21114B5A007A71C8 /* XEditMainViewController.mm */,
+				607ED911211148A6007A71C8 /* Main.storyboard */,
+				607ED94421115234007A71C8 /* XEditCreateProjectCollectionViewCell.h */,
+				607ED94521115234007A71C8 /* XEditCreateProjectCollectionViewCell.m */,
+				607ED94621115234007A71C8 /* XEditCreateProjectCollectionViewCell.xib */,
+				607ED94921115302007A71C8 /* XEditProjectCollectionViewCell.h */,
+				607ED94A21115302007A71C8 /* XEditProjectCollectionViewCell.m */,
+				607ED94B21115302007A71C8 /* XEditProjectCollectionViewCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		607ED94E211156E7007A71C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				607ED952211157BD007A71C8 /* XEditDefine.h */,
+				60B8C3F32117FCD00047CEA0 /* XEditExtern.h */,
+				60B8C3F42117FCD00047CEA0 /* XEditExtern.m */,
+				607ED94F21115760007A71C8 /* XEditUtils.h */,
+				607ED95021115760007A71C8 /* XEditUtils.m */,
+				607ED95A21118B59007A71C8 /* NSBundle+XEdit.h */,
+				607ED95B21118B59007A71C8 /* NSBundle+XEdit.m */,
+				607ED9632111970B007A71C8 /* UINavigationBar+XEdit.h */,
+				607ED9642111970B007A71C8 /* UINavigationBar+XEdit.m */,
+				607ED96D2111A7BE007A71C8 /* UIView+XEdit.h */,
+				607ED96E2111A7BE007A71C8 /* UIView+XEdit.m */,
+				607ED9A22114052E007A71C8 /* XEditPanGestureRecognizer.h */,
+				607ED9A32114052E007A71C8 /* XEditPanGestureRecognizer.m */,
+				6018F214221A610300092A0A /* UIAlertController+XEdit.h */,
+				6018F215221A610300092A0A /* UIAlertController+XEdit.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		607ED96621119F4E007A71C8 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				607ED9702112A9D7007A71C8 /* Track */,
+				607ED96A2111A1BC007A71C8 /* XEditTimelineViewController.h */,
+				607ED96B2111A1BC007A71C8 /* XEditTimelineViewController.mm */,
+				607ED96721119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.h */,
+				607ED96821119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.m */,
+				60CE09F9221FDBE700370DC0 /* XEditTimelineObserver.hpp */,
+				60CE09FB221FDC4100370DC0 /* XEditVideoRenderer.hpp */,
+				605B8DD82227D2FA00E0E39A /* XEditTimelineCutView.h */,
+				605B8DD92227D2FA00E0E39A /* XEditTimelineCutView.m */,
+				605B8DDB2227D31300E0E39A /* XEditTimelineCutView.xib */,
+				605B8DDF2227E19700E0E39A /* XEditTimelineVolumeView.h */,
+				605B8DE02227E19700E0E39A /* XEditTimelineVolumeView.m */,
+				605B8DDD2227E17400E0E39A /* XEditTimelineVolumeView.xib */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		607ED9702112A9D7007A71C8 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				601AFC6F222FE73F00843A83 /* Clip */,
+				607ED9832112E5B7007A71C8 /* XEditVideoTrackTableViewCell.h */,
+				607ED9842112E5B7007A71C8 /* XEditVideoTrackTableViewCell.mm */,
+				607ED9852112E5B7007A71C8 /* XEditVideoTrackTableViewCell.xib */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		607ED9762112AE50007A71C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60CE09FE221FFF0100370DC0 /* SKGLKView.h */,
+				60CE09FD221FFF0100370DC0 /* SKGLKView.m */,
+				6007138F2235FA2F00FF0285 /* XEditOutputType.h */,
+				600713902235FA2F00FF0285 /* XEditOutputType.m */,
+				6007139B223758FB00FF0285 /* XEditProject.h */,
+				6007139C223758FB00FF0285 /* XEditProject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E29001878BE25980336C267B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACBA969231BFCE0D82ADA2CF /* Pods-XEdit.debug.xcconfig */,
+				C90103843DEE914005AE3532 /* Pods-XEdit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5A0C5E8E50A6B03D2674C90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				605B8DD5222792AC00E0E39A /* libavpub.a */,
+				6018F1EB221A5D3900092A0A /* libboost_filesystem.a */,
+				6018F1EC221A5D3900092A0A /* libboost_system.a */,
+				602B20F922166E2200DE70E3 /* libfreeimage.a */,
+				602B20F522166D4C00DE70E3 /* libm.tbd */,
+				602B20F322166D3E00DE70E3 /* libiconv.tbd */,
+				602B20F122166D3700DE70E3 /* libz.tbd */,
+				602B20EF22166D2E00DE70E3 /* libpthread.tbd */,
+				602B20ED22166CCF00DE70E3 /* libxml2.a */,
+				602B20E12215424200DE70E3 /* libxengine.a */,
+				602B20E02215424200DE70E3 /* libxutil.a */,
+				5B1535C7FDFCA4BA9B09497D /* libPods-XEdit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		607ED907211148A6007A71C8 /* XEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607ED934211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEdit" */;
+			buildPhases = (
+				5B976CA2F050B073F9F4E0DE /* [CP] Check Pods Manifest.lock */,
+				607ED904211148A6007A71C8 /* Sources */,
+				607ED905211148A6007A71C8 /* Frameworks */,
+				607ED906211148A6007A71C8 /* Resources */,
+				C390FB8BA98AE0A127021321 /* [CP] Embed Pods Frameworks */,
+				EF2CA8944B91E250B611E173 /* [CP] Copy Pods Resources */,
+				600713A72237637E00FF0285 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XEdit;
+			productName = XEdit;
+			productReference = 607ED908211148A6007A71C8 /* XEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		607ED91F211148A7007A71C8 /* XEditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607ED937211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEditTests" */;
+			buildPhases = (
+				607ED91C211148A7007A71C8 /* Sources */,
+				607ED91D211148A7007A71C8 /* Frameworks */,
+				607ED91E211148A7007A71C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607ED922211148A7007A71C8 /* PBXTargetDependency */,
+			);
+			name = XEditTests;
+			productName = XEditTests;
+			productReference = 607ED920211148A7007A71C8 /* XEditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607ED92A211148A7007A71C8 /* XEditUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607ED93A211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEditUITests" */;
+			buildPhases = (
+				607ED927211148A7007A71C8 /* Sources */,
+				607ED928211148A7007A71C8 /* Frameworks */,
+				607ED929211148A7007A71C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607ED92D211148A7007A71C8 /* PBXTargetDependency */,
+			);
+			name = XEditUITests;
+			productName = XEditUITests;
+			productReference = 607ED92B211148A7007A71C8 /* XEditUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607ED900211148A6007A71C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Lskyme;
+				TargetAttributes = {
+					607ED907211148A6007A71C8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					607ED91F211148A7007A71C8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 607ED907211148A6007A71C8;
+					};
+					607ED92A211148A7007A71C8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 607ED907211148A6007A71C8;
+					};
+				};
+			};
+			buildConfigurationList = 607ED903211148A6007A71C8 /* Build configuration list for PBXProject "XEdit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607ED8FF211148A6007A71C8;
+			productRefGroup = 607ED909211148A6007A71C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607ED907211148A6007A71C8 /* XEdit */,
+				607ED91F211148A7007A71C8 /* XEditTests */,
+				607ED92A211148A7007A71C8 /* XEditUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607ED906211148A6007A71C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607ED9822112D64E007A71C8 /* XEditProjectOutputTableViewCell.xib in Resources */,
+				607ED918211148A7007A71C8 /* LaunchScreen.storyboard in Resources */,
+				607ED94D21115302007A71C8 /* XEditProjectCollectionViewCell.xib in Resources */,
+				607ED94821115234007A71C8 /* XEditCreateProjectCollectionViewCell.xib in Resources */,
+				607ED9872112E5B7007A71C8 /* XEditVideoTrackTableViewCell.xib in Resources */,
+				601AFC73222FE73F00843A83 /* XEditVideoClipView.xib in Resources */,
+				607ED955211163A6007A71C8 /* XEditProject.storyboard in Resources */,
+				607ED915211148A7007A71C8 /* Assets.xcassets in Resources */,
+				605B8DDE2227E17400E0E39A /* XEditTimelineVolumeView.xib in Resources */,
+				600713932236127300FF0285 /* XEditProjectOutputProgressView.xib in Resources */,
+				607ED913211148A6007A71C8 /* Main.storyboard in Resources */,
+				605B8DDC2227D31300E0E39A /* XEditTimelineCutView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED91E211148A7007A71C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED929211148A7007A71C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B976CA2F050B073F9F4E0DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XEdit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C390FB8BA98AE0A127021321 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XEdit/Pods-XEdit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTAssetsPickerController/CTAssetsPickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTAssetsPickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XEdit/Pods-XEdit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF2CA8944B91E250B611E173 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XEdit/Pods-XEdit-resources.sh",
+				"${PODS_ROOT}/CTAssetsPickerController/CTAssetsPickerController/CTAssetsPickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CTAssetsPickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XEdit/Pods-XEdit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607ED904211148A6007A71C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6007139A22363D4800FF0285 /* XEditGenerateObserver.hpp in Sources */,
+				607ED96C2111A1BC007A71C8 /* XEditTimelineViewController.mm in Sources */,
+				6018F216221A610300092A0A /* UIAlertController+XEdit.m in Sources */,
+				607ED91B211148A7007A71C8 /* main.m in Sources */,
+				607ED94721115234007A71C8 /* XEditCreateProjectCollectionViewCell.m in Sources */,
+				60CE09FA221FDBE700370DC0 /* XEditTimelineObserver.hpp in Sources */,
+				607ED9862112E5B7007A71C8 /* XEditVideoTrackTableViewCell.mm in Sources */,
+				607ED96F2111A7BE007A71C8 /* UIView+XEdit.m in Sources */,
+				607ED93F21114B5A007A71C8 /* XEditMainViewController.mm in Sources */,
+				607ED95821118828007A71C8 /* XEditProjectDetailViewController.mm in Sources */,
+				60B8C3F52117FCD00047CEA0 /* XEditExtern.m in Sources */,
+				605B8DE12227E19700E0E39A /* XEditTimelineVolumeView.m in Sources */,
+				605B8DDA2227D2FA00E0E39A /* XEditTimelineCutView.m in Sources */,
+				607ED94C21115302007A71C8 /* XEditProjectCollectionViewCell.m in Sources */,
+				601AFC74222FE73F00843A83 /* XEditVideoClipView.mm in Sources */,
+				607ED96921119F65007A71C8 /* XEditTimelineTotalTimeCollectionViewCell.m in Sources */,
+				607ED97D2112D3DA007A71C8 /* XEditProjectOutputViewController.mm in Sources */,
+				60B8C3F821182ACE0047CEA0 /* XEditMainNavigationController.m in Sources */,
+				60CE09FC221FDC4100370DC0 /* XEditVideoRenderer.hpp in Sources */,
+				607ED95121115760007A71C8 /* XEditUtils.m in Sources */,
+				607ED9652111970B007A71C8 /* UINavigationBar+XEdit.m in Sources */,
+				607ED96221118F75007A71C8 /* XEditBundleClass.m in Sources */,
+				607ED90D211148A6007A71C8 /* AppDelegate.m in Sources */,
+				60071396223634AA00FF0285 /* XEditProjectOutputProgressView.m in Sources */,
+				607ED95C21118B59007A71C8 /* NSBundle+XEdit.m in Sources */,
+				607ED9A42114052E007A71C8 /* XEditPanGestureRecognizer.m in Sources */,
+				6007139D223758FB00FF0285 /* XEditProject.m in Sources */,
+				607ED9812112D64E007A71C8 /* XEditProjectOutputTableViewCell.m in Sources */,
+				60CE09FF221FFF0200370DC0 /* SKGLKView.m in Sources */,
+				600713912235FA2F00FF0285 /* XEditOutputType.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED91C211148A7007A71C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607ED925211148A7007A71C8 /* XEditTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607ED927211148A7007A71C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607ED930211148A7007A71C8 /* XEditUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		607ED922211148A7007A71C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607ED907211148A6007A71C8 /* XEdit */;
+			targetProxy = 607ED921211148A7007A71C8 /* PBXContainerItemProxy */;
+		};
+		607ED92D211148A7007A71C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607ED907211148A6007A71C8 /* XEdit */;
+			targetProxy = 607ED92C211148A7007A71C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607ED911211148A6007A71C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607ED912211148A6007A71C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607ED916211148A7007A71C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607ED917211148A7007A71C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		607ED932211148A8007A71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		607ED933211148A8007A71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607ED935211148A8007A71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBA969231BFCE0D82ADA2CF /* Pods-XEdit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XEdit/SupportedFiles/XEdit-PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CTAssetsPickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/PureLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					/Users/dfsx/Desktop/XEdit/trunk/include,
+					/Users/dfsx/Desktop/XEdit/trunk/include/xengine,
+					/Users/dfsx/Desktop/XEdit/trunk/include/xutil,
+					"/Users/dfsx/Desktop/XEdit/trunk/third-part/include/libav",
+				);
+				INFOPLIST_FILE = XEdit/SupportedFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/dfsx/Desktop/XEdit/trunk/lib/iOS/Debug,
+					"/Users/dfsx/Desktop/XEdit/trunk/third-part/lib/iOS/Debug",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CTAssetsPickerController\"",
+					"-l\"PureLayout\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Photos\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		607ED936211148A8007A71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C90103843DEE914005AE3532 /* Pods-XEdit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XEdit/SupportedFiles/XEdit-PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CTAssetsPickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/PureLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					/Users/dfsx/Desktop/XEdit/trunk/include,
+					/Users/dfsx/Desktop/XEdit/trunk/include/xengine,
+					/Users/dfsx/Desktop/XEdit/trunk/include/xutil,
+					"/Users/dfsx/Desktop/XEdit/trunk/third-part/include/libav",
+				);
+				INFOPLIST_FILE = XEdit/SupportedFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CTAssetsPickerController\"",
+					"-l\"PureLayout\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Photos\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		607ED938211148A8007A71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				INFOPLIST_FILE = XEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XEdit.app/XEdit";
+			};
+			name = Debug;
+		};
+		607ED939211148A8007A71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				INFOPLIST_FILE = XEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XEdit.app/XEdit";
+			};
+			name = Release;
+		};
+		607ED93B211148A8007A71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				INFOPLIST_FILE = XEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XEdit;
+			};
+			name = Debug;
+		};
+		607ED93C211148A8007A71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFLGCRR3G6;
+				INFOPLIST_FILE = XEditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lskyme.XEditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XEdit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607ED903211148A6007A71C8 /* Build configuration list for PBXProject "XEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607ED932211148A8007A71C8 /* Debug */,
+				607ED933211148A8007A71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607ED934211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607ED935211148A8007A71C8 /* Debug */,
+				607ED936211148A8007A71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607ED937211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607ED938211148A8007A71C8 /* Debug */,
+				607ED939211148A8007A71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607ED93A211148A8007A71C8 /* Build configuration list for PBXNativeTarget "XEditUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607ED93B211148A8007A71C8 /* Debug */,
+				607ED93C211148A8007A71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607ED900211148A6007A71C8 /* Project object */;
+}

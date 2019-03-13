@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/close_page"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_close_window"/>
+
+        <TextView
+            android:id="@+id/title_proj_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/title_out_put"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:paddingRight="15dp"
+            android:text="输出"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/image_out_put"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_save_video_local"/>
+    </RelativeLayout>
+</LinearLayout>

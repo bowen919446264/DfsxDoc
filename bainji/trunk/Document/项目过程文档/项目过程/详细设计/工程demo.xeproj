@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 工程主体 
+version 工程文件版本号
+-->
+<project version="1.0">
+	<!-- 工程名称 -->
+	<name>样例工程</name>
+	
+	<!-- 工程id(uint64_t) -->
+	<id>123456789</id>
+	
+	<!-- 工程设置 -->
+	<settings>
+		<!-- 声音输出设置 -->
+		<audioOutput>
+			<!-- 采样率（HZ） -->
+			<sampleRate>48000</sampleRate>
+			
+			<!-- 采样大小 -->
+			<bitsPerSample>16</bitsPerSample>
+			
+			<!-- 声道数 -->
+			<channelCount>2</channelCount>
+			
+			<!-- 声道布局
+				* 1ch : front center (mono)
+				* 2ch : L + R (stereo)
+				* 3ch : front center + L + R
+				* 4ch : front center + L + R + back center
+				* 5ch : front center + L + R + back stereo
+				* 6ch : front center + L + R + back stereo + LFE (5.1)
+				* 7ch : front center + L + R + outer front left + outer front right + back stereo + LFE (7.1)     
+			-->
+			<channelLayout>2</channelLayout>
+			
+			<!-- 采样格式（手机硬件可能支持其它格式），默认值auto -->
+			<format>pcm</format>
+		</audioOutput>
+		
+		<!-- 视频输出设置 -->
+		<videoOutput>
+			<!-- 像素宽度 -->
+			<width>1920</width>
+			
+			<!-- 像素高度 -->
+			<height>1080</height>
+			
+			<!-- 帧率，单位：fps -->
+			<framerate>
+				<numerator>25</numerator>
+				<denominator>1</denominator>
+			</framerate>
+			
+			<!-- 像素格式（手机硬件可能支持多种格式），默认值auto -->
+			<format>yuv420p</format>
+		</videoOutput>
+		
+		<!-- 时间刻度，单位：秒。工程中所有与时间相关的参数都基于timebase -->
+		<timebase>
+			<numerator>1</numerator>
+			<denominator>25</denominator>
+		</timebase>
+	
+	</settings>
+	
+	<!-- 媒体集合。【媒体】-可能是文件或者网络流 -->
+	<medias>
+		<!-- 视音频 -->
+		<av>
+			<!-- 媒体id(uint64_t) -->
+			<id>111111111</id>
+			
+			<!-- 媒体路径 -->
+			<path>e:/20秒.mp4</path>
+			
+			<!-- 时长(基于timebase) -->
+			<duration>500</duration>
+			
+			<!-- 流信息 -->
+			<streams>
+				<!-- 视频流 -->
+				<videoStream>
+					<!-- 流索引 -->
+					<index>0</index>
+					
+					<!-- 时长(基于timebase) -->
+					<duration>500</duration>
+					
+					<!-- 编码格式 -->
+					<codec>h264</codec>
+					
+					<!-- 比特率模式：constant或者variable -->
+					<bitrateMode>constant</bitrateMode>
+					
+					<!-- 平均比特率bps -->
+					<averageBitrate>
+						<numerator>800000</numerator>
+						<denominator>1</denominator>
+					</averageBitrate>
+					
+					<!-- sample aspect ratio -->
+					<sar>
+						<numerator>16</numerator>
+						<denominator>9</denominator>
+					</sar>
+					
+					<!-- display aspect ratio -->
+					<dar>
+						<numerator>16</numerator>
+						<denominator>9</denominator>
+					</dar>
+					
+					<!-- 帧率模式：constant或者variable -->
+					<framerateMode>constant</framerateMode>
+					
+					<!-- 平均帧率 -->
+					<averageFramerate>
+						<numerator>25</numerator>
+						<denominator>1</denominator>
+					</averageFramerate>
+					
+					<!-- 帧数 -->
+					<frameCount>500</frameCount>
+					
+					<!-- 是否场交错 -->
+					<isInterlaced>true</isInterlaced>
+					
+					<!-- 是否上场优先 -->
+					<isTopFieldFirst>false</isTopFieldFirst>
+					
+					<!-- profile(枚举) -->
+					<profile>H264_MainProfile</profile>
+					
+					<!-- level(枚举) -->
+					<level>H264_MainLevel</level>
+
+				</videoStream>
+				
+				<!-- 音频流 -->
+				<audioStream>
+					<!-- 流索引 -->
+					<index>1</index>
+					
+					<!-- 时长(基于timebase) -->
+					<duration>500</duration>
+					
+					<!-- 编码格式 -->
+					<codec>aac</codec>
+					
+					<!-- 比特率模式：constant或者variable -->
+					<bitrateMode>constant</bitrateMode>
+					
+					<!-- 平均比特率bps -->
+					<averageBitrate>
+						<numerator>128000</numerator>
+						<denominator>1</denominator>
+					</averageBitrate>
+					
+					<!-- 采样格式(枚举) -->
+					<sampleFormat>signed16</sampleFormat>
+					
+					<!-- 采样率，单位HZ -->
+					<sampleRate>48000</sampleRate>
+					
+					<!-- 采样大小 -->
+					<bitsPerSample>16</bitsPerSample>
+					
+					<!-- 声道数 -->
+					<channelCount>2</channelCount>
+					
+					<!-- 声道布局
+						* 1ch : front center (mono)
+						* 2ch : L + R (stereo)
+						* 3ch : front center + L + R
+						* 4ch : front center + L + R + back center
+						* 5ch : front center + L + R + back stereo
+						* 6ch : front center + L + R + back stereo + LFE (5.1)
+						* 7ch : front center + L + R + outer front left + outer front right + back stereo + LFE (7.1)     
+					-->
+					<channelLayout>stereo</channelLayout>
+				</audioStream>
+			</streams>
+		</av>
+		
+		<!-- 图片 -->
+		<image>
+			<!-- 媒体id -->
+			<id>222222222</id>
+			
+			<!-- 媒体路径 -->
+			<path>e:/1.png</path>
+			
+			<!-- 图片类型 -->
+			<type>png</type>
+			
+			<!-- 图片宽度 -->
+			<width>1920</width>
+			
+			<!-- 图片高度 -->
+			<height>1080</height>
+		</image>
+	</medias>
+	
+	<!-- 预览集合(关键帧预览，比如：每间隔5秒的关键帧。对于网络流，这些预览地址可能是网络地址) -->
+	<mediaPreviews>
+		<preview mediaId="111111111" streamIndex="0">
+			<previewFrame>
+				<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/0.jpg</path>
+				<frameIndex>0</frameIndex>
+			</previewFrame>
+			<previewFrame>
+				<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/125.jpg</path>
+				<frameIndex>125</frameIndex>
+			</previewFrame>
+			<previewFrame>
+				<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/250.jpg</path>
+				<frameIndex>250</frameIndex>
+			</previewFrame>
+			<previewFrame>
+				<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/375.jpg</path>
+				<frameIndex>375</frameIndex>
+			</previewFrame>
+			<previewFrame>
+				<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/499.jpg</path>
+				<frameIndex>499</frameIndex>
+			</previewFrame>
+		</preview>
+	</mediaPreviews>
+	
+	<!-- 切片集合 -->
+	<clips>
+		<!-- 切片 -->
+		<clip>
+			<!-- 切片id -->
+			<id>333333333</id>
+			
+			<!-- 切片引用的媒体id -->
+			<refMediaId>111111111</refMediaId>
+
+			<!-- 切片在媒体中的偏移时间(基于timebase) -->
+			<offsetInMedia>0</offsetInMedia>
+			
+			<!-- 切片时长(基于timebase) -->
+			<duration>500</duration>
+			
+			<!-- 切片缩略图路径 -->
+			<thumbnail>e:/tmp/C220F4ED-1CDF-47ea-B628-48F3C9711084.jpg</thumbnail>
+			
+			<!-- 流信息集合（如果视音频未分离，则可能有多个流；如果分离，则此处只有一个视频流或者一个音频流） -->
+			<streams>
+				<stream>
+					<!-- 流索引 -->
+					<index>0</index>
+				</stream>
+				<stream>
+					<!-- 流索引 -->
+					<index>1</index>
+				</stream>
+			</streams>
+		</clip>
+		
+		<!-- 切片 -->
+		<clip>
+			<!-- 切片id -->
+			<id>444444444</id>
+			
+			<!-- 切片引用的媒体id -->
+			<refMediaId>222222222</refMediaId>
+			
+			<!-- 切片在媒体中的偏移时间(基于timebase) -->
+			<offsetInMedia>0</offsetInMedia>
+			
+			<!-- 切片时长(基于timebase) -->
+			<duration>100</duration>
+			
+			<!-- 切片缩略图 -->
+			<thumbnail>e:/tmp/D8D56C7B-4F46-4fbd-8110-47CAEBB163E9.jpg</thumbnail>
+		</clip>
+	</clips>
+	
+	<!-- 时间线 -->
+	<timeline>
+		<!-- 轨道集合 -->
+		<tracks>
+			<!-- 媒体轨道 -->
+			<track>
+				<!-- 轨道id -->
+				<id>555555555</id>
+				
+				<!-- 轨道类型 -->
+				<type>video</type>
+				
+				<!-- 是否禁用 -->
+				<isDisabled>false</isDisabled>
+				
+				<!-- 切片信息集合 -->
+				<clipsInfo>
+					<clipInfo>
+						<!-- 引用的切片id -->
+						<refClipId>333333333</refClipId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>0</offsetOnTrack>
+					</clipInfo>
+					<clipInfo>
+						<!-- 引用的切片id -->
+						<refClipId>444444444</refClipId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>500</offsetOnTrack>
+					</clipInfo>
+				</clipsInfo>
+			</track>
+		</tracks>
+	</timeline>
+</project>

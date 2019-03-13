@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dfsx.videoeditor.widget.timeline.TimeLineRecyclerView
+        android:id="@+id/item_hor_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:layout_marginTop="35dp"
+        android:scrollbars="none"
+        />
+
+    <View
+        android:id="@+id/item_time_index_line"
+        android:layout_width="@dimen/time_line_ver_line_width"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:layout_below="@+id/line_top_layout"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/line_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        >
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="00:00:00.0"/>
+
+        <TextView
+            android:id="@+id/all_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:text="00:00:00"/>
+    </RelativeLayout>
+</RelativeLayout>

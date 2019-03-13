@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidExsample</string>
+    <string name="denied_message">没有权限</string>
+</resources>

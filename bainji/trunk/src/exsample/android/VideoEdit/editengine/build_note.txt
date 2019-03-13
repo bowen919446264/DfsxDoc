@@ -1,0 +1,2 @@
+1. 执行下面命令, 可以生成Android build.gradle 依赖脚本
+bash configure --libav-inc-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/libav/include --libav-lib-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/libav/lib --xedit-inc-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/XEdit/include --xedit-lib-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/XEdit/lib --nle-lib-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/NLEPro/trunk/dlls/DsNleLib/linux/lib --xedit-gen-dir=F:/WORK/Android_SPACE/Lib/xedit/dependency/XEdit/generated

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">editEngine</string>
+    <string name="denied_message">没有权限</string>
+</resources>

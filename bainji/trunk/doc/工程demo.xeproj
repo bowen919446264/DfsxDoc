@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 工程主体 
+version 工程文件版本号
+-->
+<project version="1">
+	<!-- 工程名称 -->
+	<name>样例工程</name>
+	
+	<!-- 工程id(int64_t) -->
+	<id>123456789</id>
+	
+	<!-- 工程设置 -->
+	<settings>
+		<!-- 声音输出设置 -->
+		<audioOutput>
+			<!-- 采样率（HZ） -->
+			<sampleRate>48000</sampleRate>
+			
+			<!-- 采样大小 -->
+			<bitsPerSample>16</bitsPerSample>
+			
+			<!-- 声道数 -->
+			<channelCount>2</channelCount>
+			
+			<!-- 声道布局
+				* 1ch : front center (mono)
+				* 2ch : L + R (stereo)
+				* 3ch : front center + L + R
+				* 4ch : front center + L + R + back center
+				* 5ch : front center + L + R + back stereo
+				* 6ch : front center + L + R + back stereo + LFE (5.1)
+				* 7ch : front center + L + R + outer front left + outer front right + back stereo + LFE (7.1)     
+			-->
+			<channelLayout>4</channelLayout>
+			
+			<!-- 采样格式
+				enum ESampleFormat {
+			        EAV_SAMPLE_FMT_NONE,
+			        EAV_SAMPLE_FMT_U8,          ///< unsigned 8 bits
+			        EAV_SAMPLE_FMT_S16,         ///< signed 16 bits
+			        EAV_SAMPLE_FMT_S32,         ///< signed 32 bits
+			        EAV_SAMPLE_FMT_FLT,         ///< float
+			        EAV_SAMPLE_FMT_DBL,         ///< double
+			        EAV_SAMPLE_FMT_U8P,         ///< unsigned 8 bits, planar
+			        EAV_SAMPLE_FMT_S16P,        ///< signed 16 bits, planar
+			        EAV_SAMPLE_FMT_S32P,        ///< signed 32 bits, planar
+			        EAV_SAMPLE_FMT_FLTP,        ///< float, planar
+			        EAV_SAMPLE_FMT_DBLP,        ///< double, planar
+
+			        EAV_SAMPLE_FMT_UNKNOWN = 0x100000
+			    };
+			 -->
+			<format>2</format>
+		</audioOutput>
+		
+		<!-- 视频输出设置 -->
+		<videoOutput>
+			<!-- 像素宽度 -->
+			<width>1920</width>
+			
+			<!-- 像素高度 -->
+			<height>1080</height>
+			
+			<!-- 显示宽高比(当像素不是正方形时，此值不等于 像素宽:像素高) -->
+			<aspectRatio>
+				<numerator>16</numerator>
+				<denominator>9</denominator>
+			</aspectRatio>
+			
+			<!-- 帧率，单位：fps -->
+			<framerate>
+				<numerator>25</numerator>
+				<denominator>1</denominator>
+			</framerate>
+			
+			<!-- 像素格式 
+				enum EPixFormat
+				{
+				    EPIX_FMT_NONE,
+				    EPIX_FMT_YUV420P,   ///< planar YUV 4:2:0, 12bpp, (1 Cr & Cb sample per 2x2 Y samples)
+				    EPIX_FMT_YUYV422,   ///< packed YUV 4:2:2, 16bpp, Y0 Cb Y1 Cr
+				    EPIX_FMT_RGB24,     ///< packed RGB 8:8:8, 24bpp, RGBRGB...
+					EPIX_FMT_BGR24,     ///< packed RGB 8:8:8, 24bpp, BGRBGR...
+				    EPIX_FMT_YUV422P,   ///< planar YUV 4:2:2, 16bpp, (1 Cr & Cb sample per 2x1 Y samples)
+				    EPIX_FMT_YUVA422P,  ///< planar YUV 4:2:2 width Alpha, 24bpp, (1 Cr & Cb sample per 2x1 Y samples)
+				    EPIX_FMT_YUV444P,   ///< planar YUV 4:4:4, 24bpp, (1 Cr & Cb sample per 1x1 Y samples)
+				    EPIX_FMT_YUV410P,   ///< planar YUV 4:1:0,  9bpp, (1 Cr & Cb sample per 4x4 Y samples)
+				    EPIX_FMT_YUV411P,   ///< planar YUV 4:1:1, 12bpp, (1 Cr & Cb sample per 4x1 Y samples)
+				    EPIX_FMT_GRAY8,     ///<        Y        ,  8bpp
+				    EPIX_FMT_PAL8,      ///< 8 bit with PIX_FMT_RGB32 palette
+				    EPIX_FMT_UYVY422,   ///< packed YUV 4:2:2, 16bpp, Cb Y0 Cr Y1
+				    EPIX_FMT_UYYVYY411, ///< packed YUV 4:1:1, 12bpp, Cb Y0 Y1 Cr Y2 Y3
+				    EPIX_FMT_NV12,      ///< planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved (first byte U and the following byte V)
+				    EPIX_FMT_NV21,      ///< as above, but U and V bytes are swapped
+
+				    EPIX_FMT_ARGB,      ///< packed ARGB 8:8:8:8, 32bpp, ARGBARGB...
+				    EPIX_FMT_RGBA,      ///< packed RGBA 8:8:8:8, 32bpp, RGBARGBA...
+				    EPIX_FMT_ABGR,      ///< packed ABGR 8:8:8:8, 32bpp, ABGRABGR...
+				    EPIX_FMT_BGRA,      ///< packed BGRA 8:8:8:8, 32bpp, BGRABGRA...
+
+				    EPIX_FMT_GRAY16BE,  ///<        Y        , 16bpp, big-endian
+				    EPIX_FMT_GRAY16LE,  ///<        Y        , 16bpp, little-endian
+				    EPIX_FMT_YUV440P,   ///< planar YUV 4:4:0 (1 Cr & Cb sample per 1x2 Y samples)
+				    EPIX_FMT_YUVA420P,  ///< planar YUV 4:2:0, 20bpp, (1 Cr & Cb sample per 2x2 Y & A samples)
+				    EPIX_FMT_YUVJ420P,  ///< planar YUV 4:2:0, 12bpp, full scale (JPEG), deprecated in favor of PIX_FMT_YUV420P and setting color_range
+				    EPIX_FMT_YUVJ422P,  ///< planar YUV 4:2:2, 16bpp, full scale (JPEG), deprecated in favor of PIX_FMT_YUV422P and setting color_range
+        
+				    EPIX_FMT_YUV422P10LE, ///< planar YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian
+        
+				    EPIX_FMT_UNKONWN = 0x100000
+				};
+			-->
+			<format>1</format>
+			
+			<!-- 是否场交错 -->
+			<isInterlaced>1</isInterlaced>
+			
+			<!-- 是否上场优先 -->
+			<isTopFieldFirst>0</isTopFieldFirst>
+			
+		</videoOutput>
+	</settings>
+	
+	<!-- 媒体集合。【媒体】-可能是文件或者网络流 -->
+	<medias>
+		<!-- 视音频
+			媒体类型type ==>
+			enum EMediaType {
+		        EMediaType_Invalid,
+		        EMediaType_AV,
+		        EMediaType_Image,
+				EMediaType_SVG
+		    };
+		-->
+		<media type="1">
+			<!-- 媒体id(int64_t) -->
+			<id>111111111</id>
+			
+			<!-- 媒体路径 -->
+			<path>e:/20秒.mp4</path>
+			
+			<!-- 时长 -->
+			<duration>
+				<numerator>1000</numerator>
+				<denominator>25</denominator>
+			</duration>
+			
+			<!-- 文件长度(字节数) -->
+			<fileSize>65535000</fileSize>
+			
+			<!-- 封装类型
+				enum EMuxerType {
+			        EMUXER_TYPE_NONE,
+			        EMUXER_TYPE_AAC,    // raw ADTS AAC
+			        EMUXER_TYPE_AC3,    // raw AC-3
+			        EMUXER_TYPE_EAC3,   // raw E-AC-3
+			        EMUXER_TYPE_AIFF,   // Audio IFF
+			        EMUXER_TYPE_AMR,    // 3GPP AMR file format
+			        EMUXER_TYPE_APE,    // Monkey's Audio
+			        EMUXER_TYPE_ASF,    // ASF format
+			        EMUXER_TYPE_AVI,    // AVI Format
+			        EMUXER_TYPE_AVS,    // AVISynth
+			        EMUXER_TYPE_DSHOW,  // DirectShow capture
+			        EMUXER_TYPE_DV,     // DV video format
+			        EMUXER_TYPE_DV1394, // DV1394 A/V grab
+			        EMUXER_TYPE_FLV,    // FLV format
+			        EMUXER_TYPE_GXF,    // GXF format
+			        EMUXER_TYPE_MOV,    // QuickTime/MPEG-4/Motion JPEG 2000 format
+			        EMUXER_TYPE_MP3,    // MPEG audio layer 2/3
+			        EMUXER_TYPE_MPEGVIDEO,      // MPEG Video
+			        EMUXER_TYPE_MPEGPS,         // MPEG-PS format
+			        EMUXER_TYPE_MPEGTS,         // MPEG-2 transport stream format
+			        EMUXER_TYPE_MPEGTS_RAW,     // MPEG-2 raw transport stream format
+			        EMUXER_TYPE_MXF,            // Material eXchange Format
+			        EMUXER_TYPE_PCM,            // PCM Format
+			        EMUXER_TYPE_WAV,            // WAV format
+        
+			        EMUXER_TYPE_UNKONWN = 0x10000
+			    };
+			-->
+			<muxerType>15</muxerType>
+			
+			<!-- 综合比特率 -->
+			<overallBitrate>500000</overallBitrate>
+			
+			<!-- 流信息 -->
+			<streams>
+				<!-- 视频流 -->
+				<videoStream>
+					<!-- 流索引 -->
+					<index>0</index>
+					
+					<!-- 流id -->
+					<streamId>224</streamId>
+					
+					<!-- 时长 -->
+					<duration>
+						<numerator>1000</numerator>
+						<denominator>25</denominator>
+					</duration>
+					
+					<!-- 编码格式 
+						enum ECodecID {
+					        // video codecs
+					        ECODEC_ID_NONE = 0,
+					        ECODEC_ID_MPEG1VIDEO = 0x00100,
+					        ECODEC_ID_MPEG2VIDEO,
+					        ECODEC_ID_MPEG4,
+					        ECODEC_ID_H264,
+					        ECODEC_ID_RAWVIDEO,
+					        ECODEC_ID_FLV1,
+					        ECODEC_ID_DVVIDEO,
+							ECODEC_ID_MJPEG,
+							ECODEC_ID_H261,
+							ECODEC_ID_H263,
+							ECODEC_ID_RV10,
+							ECODEC_ID_RV20,
+							ECODEC_ID_SP5X,
+							ECODEC_ID_MSMPEG4V1,
+							ECODEC_ID_MSMPEG4V2,
+							ECODEC_ID_MSMPEG4V3,
+							ECODEC_ID_WMV1,
+							ECODEC_ID_WMV2,
+							ECODEC_ID_SVQ1,
+							ECODEC_ID_SVQ3,
+							ECODEC_ID_CYUV,
+							ECODEC_ID_INDEO3,
+							ECODEC_ID_ASV1,
+							ECODEC_ID_ASV2,
+							ECODEC_ID_FFV1,
+							ECODEC_ID_VCR1,
+							ECODEC_ID_CLJR,
+							ECODEC_ID_RPZA,
+							ECODEC_ID_CINEPAK,
+							ECODEC_ID_MSVIDEO1,
+							ECODEC_ID_8BPS,
+							ECODEC_ID_PNG,
+							ECODEC_ID_RV30,
+							ECODEC_ID_RV40,
+							ECODEC_ID_VC1,
+							ECODEC_ID_WMV3,
+							ECODEC_ID_LOCO,
+							ECODEC_ID_VP6F,
+							ECODEC_ID_DNXHD,
+							ECODEC_ID_M101,
+							ECODEC_ID_M103,
+							ECODEC_ID_PRORES,
+							ECODEC_ID_QTRLE,
+							ECODEC_ID_HEVC,
+        
+					        // various PCM codecs
+					        ECODEC_ID_PCM_S16LE = 0x10000,
+					        ECODEC_ID_PCM_S16BE,
+					        ECODEC_ID_PCM_U16LE,
+					        ECODEC_ID_PCM_U16BE,
+					        ECODEC_ID_PCM_S8,
+					        ECODEC_ID_PCM_U8,
+					        ECODEC_ID_PCM_MULAW,
+					        ECODEC_ID_PCM_ALAW,
+					        ECODEC_ID_PCM_S32LE,
+					        ECODEC_ID_PCM_S32BE,
+					        ECODEC_ID_PCM_U32LE,
+					        ECODEC_ID_PCM_U32BE,
+					        ECODEC_ID_PCM_S24LE,
+					        ECODEC_ID_PCM_S24BE,
+					        ECODEC_ID_PCM_U24LE,
+					        ECODEC_ID_PCM_U24BE,
+					        ECODEC_ID_PCM_S24DAUD,
+					        ECODEC_ID_PCM_ZORK,
+					        ECODEC_ID_PCM_S16LE_PLANAR,
+					        ECODEC_ID_PCM_DVD,
+					        ECODEC_ID_PCM_F32BE,
+					        ECODEC_ID_PCM_F32LE,
+					        ECODEC_ID_PCM_F64BE,
+					        ECODEC_ID_PCM_F64LE,
+					        ECODEC_ID_PCM_BLURAY,
+					        ECODEC_ID_PCM_LXF,
+					        ECODEC_ID_S302M,
+					        ECODEC_ID_PCM_S8_PLANAR,
+
+							// various ADPCM codecs
+							ECODEC_ID_ADPCM_IMA_QT = 0x11000,
+							ECODEC_ID_ADPCM_IMA_WAV,
+							ECODEC_ID_ADPCM_IMA_DK3,
+							ECODEC_ID_ADPCM_IMA_DK4,
+							ECODEC_ID_ADPCM_IMA_WS,
+							ECODEC_ID_ADPCM_IMA_SMJPEG,
+							ECODEC_ID_ADPCM_MS,
+							ECODEC_ID_ADPCM_4XM,
+							ECODEC_ID_ADPCM_XA,
+							ECODEC_ID_ADPCM_ADX,
+							ECODEC_ID_ADPCM_EA,
+							ECODEC_ID_ADPCM_G726,
+							ECODEC_ID_ADPCM_CT,
+							ECODEC_ID_ADPCM_SWF,
+							ECODEC_ID_ADPCM_YAMAHA,
+							ECODEC_ID_ADPCM_SBPRO_4,
+							ECODEC_ID_ADPCM_SBPRO_3,
+							ECODEC_ID_ADPCM_SBPRO_2,
+							ECODEC_ID_ADPCM_THP,
+							ECODEC_ID_ADPCM_EA_R1,
+							ECODEC_ID_ADPCM_EA_R3,
+							ECODEC_ID_ADPCM_EA_R2,
+							ECODEC_ID_ADPCM_IMA_EA_SEAD,
+							ECODEC_ID_ADPCM_IMA_EA_EACS,
+							ECODEC_ID_ADPCM_EA_XAS,
+							ECODEC_ID_ADPCM_EA_MAXIS_XA,
+							ECODEC_ID_ADPCM_IMA_ISS,
+							ECODEC_ID_ADPCM_G722,
+
+							// amr
+							ECODEC_ID_AMR_NB = 0x12000,
+
+					        // audio codecs
+					        ECODEC_ID_MP2 = 0x15000,
+					        ECODEC_ID_MP3,            // preferred ID for decoding MPEG audio layer 1, 2 or 3
+					        ECODEC_ID_AAC,
+					        ECODEC_ID_AC3,
+					        ECODEC_ID_WMAV1,
+					        ECODEC_ID_WMAV2,
+					        ECODEC_ID_FLAC,
+					        ECODEC_ID_APE,
+					        ECODEC_ID_EAC3,
+					        ECODEC_ID_AAC_LATM,
+							ECODEC_ID_DTS,
+							ECODEC_ID_COOK,
+							ECODEC_ID_ATRAC3,
+							ECODEC_ID_WMAPRO,
+							ECODEC_ID_MP1,
+
+
+					        ECODEC_ID_UNKONWN = 0x100000
+					    };
+					-->
+					<codecID>103</codecID>
+					
+					<!-- codec tag -->
+					<codecTag>87629349</codecTag>
+					
+					<!-- 流timebase -->
+					<timebase>
+						<numerator>25</numerator>
+						<denominator>1</denominator>
+					</timebase>
+					
+					<!-- 像素宽 -->
+					<width>1920</width>
+					
+					<!-- 像素高 -->
+					<height>1080</height>
+					
+					<!-- 像素格式
+						enum EPixFormat
+					    {
+					        EPIX_FMT_NONE,
+					        EPIX_FMT_YUV420P,   ///< planar YUV 4:2:0, 12bpp, (1 Cr & Cb sample per 2x2 Y samples)
+					        EPIX_FMT_YUYV422,   ///< packed YUV 4:2:2, 16bpp, Y0 Cb Y1 Cr
+					        EPIX_FMT_RGB24,     ///< packed RGB 8:8:8, 24bpp, RGBRGB...
+					        EPIX_FMT_BGR24,     ///< packed RGB 8:8:8, 24bpp, BGRBGR...
+					        EPIX_FMT_YUV422P,   ///< planar YUV 4:2:2, 16bpp, (1 Cr & Cb sample per 2x1 Y samples)
+					        EPIX_FMT_YUVA422P,  ///< planar YUV 4:2:2 width Alpha, 24bpp, (1 Cr & Cb sample per 2x1 Y samples)
+					        EPIX_FMT_YUV444P,   ///< planar YUV 4:4:4, 24bpp, (1 Cr & Cb sample per 1x1 Y samples)
+					        EPIX_FMT_YUV410P,   ///< planar YUV 4:1:0,  9bpp, (1 Cr & Cb sample per 4x4 Y samples)
+					        EPIX_FMT_YUV411P,   ///< planar YUV 4:1:1, 12bpp, (1 Cr & Cb sample per 4x1 Y samples)
+					        EPIX_FMT_GRAY8,     ///<        Y        ,  8bpp
+					        EPIX_FMT_PAL8,      ///< 8 bit with PIX_FMT_RGB32 palette
+					        EPIX_FMT_UYVY422,   ///< packed YUV 4:2:2, 16bpp, Cb Y0 Cr Y1
+					        EPIX_FMT_UYYVYY411, ///< packed YUV 4:1:1, 12bpp, Cb Y0 Y1 Cr Y2 Y3
+					        EPIX_FMT_NV12,      ///< planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved (first byte U and the following byte V)
+					        EPIX_FMT_NV21,      ///< as above, but U and V bytes are swapped
+
+					        EPIX_FMT_ARGB,      ///< packed ARGB 8:8:8:8, 32bpp, ARGBARGB...
+					        EPIX_FMT_RGBA,      ///< packed RGBA 8:8:8:8, 32bpp, RGBARGBA...
+					        EPIX_FMT_ABGR,      ///< packed ABGR 8:8:8:8, 32bpp, ABGRABGR...
+					        EPIX_FMT_BGRA,      ///< packed BGRA 8:8:8:8, 32bpp, BGRABGRA...
+
+					        EPIX_FMT_GRAY16BE,  ///<        Y        , 16bpp, big-endian
+					        EPIX_FMT_GRAY16LE,  ///<        Y        , 16bpp, little-endian
+					        EPIX_FMT_YUV440P,   ///< planar YUV 4:4:0 (1 Cr & Cb sample per 1x2 Y samples)
+					        EPIX_FMT_YUVA420P,  ///< planar YUV 4:2:0, 20bpp, (1 Cr & Cb sample per 2x2 Y & A samples)
+					        EPIX_FMT_YUVJ420P,  ///< planar YUV 4:2:0, 12bpp, full scale (JPEG), deprecated in favor of PIX_FMT_YUV420P and setting color_range
+					        EPIX_FMT_YUVJ422P,  ///< planar YUV 4:2:2, 16bpp, full scale (JPEG), deprecated in favor of PIX_FMT_YUV422P and setting color_range
+        
+					        EPIX_FMT_YUV422P10LE, ///< planar YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian
+        
+					        EPIX_FMT_UNKONWN = 0x100000
+					    };
+					-->
+					<pixelFormat>1</pixelFormat>
+					
+					<!-- 制式 
+						enum EStandard {
+					        ESTANDARD_NONE,
+					        ESTANDARD_PAL,        // pal
+					        ESTANDARD_NTSC        // ntsc
+					    };
+					-->
+					<standard>1</standard>
+					
+					<!-- 比特率模式
+						enum EBitrateMode {
+					        EBITRATE_MODE_NONE,
+					        EBITRATE_MODE_CBR,  // constant bitrate
+					        EBITRATE_MODE_VBR   // variable bitrate
+					    };
+					-->
+					<bitrateMode>2</bitrateMode>
+					
+					<!-- 平均比特率bps -->
+					<averageBitrate>800000</averageBitrate>
+					
+					<!-- sample aspect ratio -->
+					<sar>
+						<numerator>16</numerator>
+						<denominator>9</denominator>
+					</sar>
+					
+					<!-- display aspect ratio -->
+					<dar>
+						<numerator>16</numerator>
+						<denominator>9</denominator>
+					</dar>
+					
+					<!-- 帧率模式
+						enum EFrameRateMode {
+					        EFRAMERATE_MODE_NONE,
+					        EFRAMERATE_MODE_CFR,    // constant frame rate
+					        EFRAMERATE_MODE_VFR     // variable frame rate
+					    };
+					-->
+					<framerateMode>1</framerateMode>
+					
+					<!-- 平均帧率 -->
+					<averageFramerate>
+						<numerator>25</numerator>
+						<denominator>1</denominator>
+					</averageFramerate>
+					
+					<!-- 帧数 -->
+					<frameCount>500</frameCount>
+					
+					<!-- 是否场交错 -->
+					<isInterlaced>1</isInterlaced>
+					
+					<!-- 是否上场优先 -->
+					<isTopFieldFirst>0</isTopFieldFirst>
+					
+					<!-- 编码profile(枚举) -->
+					<profile>5</profile>
+					
+					<!-- 编码level(枚举) -->
+					<level>2</level>
+					
+					<!-- 预览集合(关键帧预览，比如：每间隔5秒的关键帧。对于网络流，这些预览地址可能是网络地址) -->
+					<preview width="180" height="120">
+						<previewFrame>
+							<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/0.jpg</path>
+							<timeOffset>
+								<numerator>0</numerator>
+								<denominator>1</denominator>
+							</timeOffset>
+						</previewFrame>
+						<previewFrame>
+							<path>e:/tmp/1762A68C-7AC2-424b-ADA9-CEC804201FBC/previews/125.jpg</path>
+							<timeOffset>
+								<numerator>500</numerator>
+								<denominator>25</denominator>
+							</timeOffset>
+						</previewFrame>
+					</preview>
+				</videoStream>
+				
+				<!-- 音频流 -->
+				<audioStream>
+					<!-- 流索引 -->
+					<index>1</index>
+					
+					<!-- 流id -->
+					<streamId>12</streamId>
+					
+					<!-- 时长 -->
+					<duration>
+						<numerator>1000</numerator>
+						<denominator>25</denominator>
+					</duration>
+					
+					<!-- 编码格式 -->
+					<codecID>86018</codecID>
+					
+					<!-- codec tag -->
+					<codecTag>87629349</codecTag>
+					
+					<!-- 比特率模式 -->
+					<bitrateMode>2</bitrateMode>
+					
+					<!-- 平均比特率bps -->
+					<averageBitrate>128000</averageBitrate>
+					
+					<!-- 流timebase -->
+					<timebase>
+						<numerator>25</numerator>
+						<denominator>1</denominator>
+					</timebase>
+					
+					<!-- 采样格式 -->
+					<sampleFormat>2</sampleFormat>
+					
+					<!-- 采样率，单位HZ -->
+					<sampleRate>48000</sampleRate>
+					
+					<!-- 采样大小 -->
+					<bitsPerSample>16</bitsPerSample>
+					
+					<!-- 声道数 -->
+					<channelCount>2</channelCount>
+					
+					<!-- 声道布局
+						* 1ch : front center (mono)
+						* 2ch : L + R (stereo)
+						* 3ch : front center + L + R
+						* 4ch : front center + L + R + back center
+						* 5ch : front center + L + R + back stereo
+						* 6ch : front center + L + R + back stereo + LFE (5.1)
+						* 7ch : front center + L + R + outer front left + outer front right + back stereo + LFE (7.1)     
+					-->
+					<channelLayout>4</channelLayout>
+					
+					<!-- 是否是无损音频 -->
+					<isLossless>0</isLossless>
+				</audioStream>
+			</streams>
+			
+		</media>
+		
+		<!-- 图片 -->
+		<media type="2">
+			<!-- 媒体id -->
+			<id>222222222</id>
+			
+			<!-- 媒体路径 -->
+			<path>e:/1.png</path>
+			
+			<!-- 图片类型
+				enum EImageType {
+			        EImageType_Unknown,
+			        EImageType_PNG,
+			        EImageType_JPG,
+			        EImageType_GIF,
+			        EImageType_TGA
+			    };
+			-->
+			<imageType>1</imageType>
+			
+			<!-- 图片宽度 -->
+			<width>1920</width>
+			
+			<!-- 图片高度 -->
+			<height>1080</height>
+		</media>
+		
+		<!-- SVG -->
+		<media type="3">
+			<!-- 媒体id -->
+			<id>333333333</id>
+			
+			<!-- 媒体路径 -->
+			<path>e:/1.png</path>
+			
+			<!-- svg内容 -->
+			<svg width="100%" height="100%" version="1.1">
+				<rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"/>
+			</svg>
+		</media>
+	</medias>
+	
+	<!-- 时间线 -->
+	<timeline>
+		<!-- 轨道集合 -->
+		<tracks>
+			<!-- 媒体轨道(视频轨) -->
+			<track>
+				<!-- 轨道id -->
+				<id>987654321</id>
+				
+				<!-- 轨道类型 -->
+				<type>1</type>
+				
+				<!-- 是否禁用 -->
+				<isDisabled>0</isDisabled>
+				
+				<!-- 切片集合 
+					切片类型type ==>
+					enum EClipType {
+				        EClipType_Invalid,
+				        EClipType_Video,
+				        EClipType_Audio,
+				        EClipType_Image,
+						EClipType_SVG
+				    };
+				-->
+				<clips>
+					<!-- 视频切片 -->
+					<clip type="1">
+						<!-- 切片id -->
+						<id>111111111001</id>
+			
+						<!-- 切片引用的媒体id -->
+						<refMediaId>111111111</refMediaId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>
+							<numerator>0</numerator>
+							<denominator>1</denominator>
+						</offsetOnTrack>
+						
+						<!-- 切片时长 -->
+						<duration>
+							<numerator>10</numerator>
+							<denominator>1</denominator>
+						</duration>
+
+						<!-- 切片在媒体中的偏移时间 -->
+						<offsetInMedia>
+							<numerator>0</numerator>
+							<denominator>1</denominator>
+						</offsetInMedia>
+						
+						<!-- 流序号 -->
+						<streamIndex>0</streamIndex>
+					</clip>
+		
+					<!-- 图片切片 -->
+					<clip type="3">
+						<!-- 切片id -->
+						<id>222222222001</id>
+			
+						<!-- 切片引用的媒体id -->
+						<refMediaId>222222222</refMediaId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>
+							<numerator>10</numerator>
+							<denominator>1</denominator>
+						</offsetOnTrack>
+			
+						<!-- 切片时长 -->
+						<duration>
+							<numerator>5</numerator>
+							<denominator>1</denominator>
+						</duration>
+			
+					</clip>
+		
+					<!-- SVG切片 -->
+					<clip type="4">
+						<!-- 切片id -->
+						<id>333333333001</id>
+			
+						<!-- 切片引用的媒体id -->
+						<refMediaId>333333333</refMediaId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>
+							<numerator>15</numerator>
+							<denominator>1</denominator>
+						</offsetOnTrack>
+						
+						<!-- 切片时长 -->
+						<duration>
+							<numerator>5</numerator>
+							<denominator>1</denominator>
+						</duration>
+			
+					</clip>
+				</clips>
+			</track>
+			
+			<!-- 媒体轨道(音频轨) -->
+			<track>
+				<!-- 轨道id -->
+				<id>987654322</id>
+				
+				<!-- 轨道类型 -->
+				<type>2</type>
+				
+				<!-- 是否禁用 -->
+				<isDisabled>0</isDisabled>
+				
+				<!-- 切片集合 -->
+				<clips>
+					<!-- 音频切片 -->
+					<clip type="2">
+						<!-- 切片id -->
+						<id>111111111002</id>
+			
+						<!-- 切片引用的媒体id -->
+						<refMediaId>111111111</refMediaId>
+						
+						<!-- 切片在轨道上的起始位置 -->
+						<offsetOnTrack>
+							<numerator>0</numerator>
+							<denominator>1</denominator>
+						</offsetOnTrack>
+						
+						<!-- 切片时长 -->
+						<duration>
+							<numerator>500</numerator>
+							<denominator>1</denominator>
+						</duration>
+
+						<!-- 切片在媒体中的偏移时间 -->
+						<offsetInMedia>
+							<numerator>0</numerator>
+							<denominator>1</denominator>
+						</offsetInMedia>
+						
+						<!-- 流序号 -->
+						<streamIndex>1</streamIndex>
+					</clip>
+				</clips>
+			</track>
+		</tracks>
+	</timeline>
+</project>

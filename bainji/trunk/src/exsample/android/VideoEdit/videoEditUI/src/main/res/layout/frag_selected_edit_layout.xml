@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/child_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_above="@+id/edit_tool_bar">
+
+        <dfsx.com.videodemo.widget.HorizontalListBarView
+            android:id="@+id/child_cut_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:item_content_width="100dp"
+            android:background="#2f2f2f"/>
+    </RelativeLayout>
+
+    <dfsx.com.videodemo.widget.HorizontalListBarView
+        android:id="@+id/edit_tool_bar"
+        android:layout_width="match_parent"
+        android:background="@color/black_38"
+        android:layout_alignParentBottom="true"
+        android:layout_height="54dp"/>
+</RelativeLayout>

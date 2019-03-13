@@ -1,0 +1,8 @@
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/CMakeFiles/edit_cache.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xutil/CMakeFiles/xutil.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xutil/CMakeFiles/edit_cache.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xutil/CMakeFiles/rebuild_cache.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xengine/CMakeFiles/xengine.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xengine/CMakeFiles/edit_cache.dir
+F:/WORK/Android_SPACE/Lib/xedit/trunk/CMakeFiles/Android/Debug/arm64-v8a/src/xengine/CMakeFiles/rebuild_cache.dir

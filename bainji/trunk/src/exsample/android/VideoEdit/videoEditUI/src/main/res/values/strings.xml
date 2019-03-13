@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">手机非编</string>
+
+    <string name="app_share_dir_authorities">dfsx.com.videodemo.dev.videoedit.fileprovider</string>
+</resources>

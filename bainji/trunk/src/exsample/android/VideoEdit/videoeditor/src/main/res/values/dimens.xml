@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="time_line_height">80dp</dimen>
+
+    <dimen name="time_line_ver_line_width">3px</dimen>
+
+    <dimen name="time_line_select_view_height">100dp</dimen>
+
+</resources>

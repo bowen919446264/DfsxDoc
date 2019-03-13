@@ -1,0 +1,359 @@
+﻿\\win7-zr
+
+\\wcc
+
+//选择的第83期次
+python F:\WORK\Android_SPACE\Lib\FacePython\Tensor\models-master\samples\core\get_started\premade_estimator.py --get_date 83
+
+
+直播：
+http://182.140.142.54:8080/
+账号：13987654320 密码：123456
+
+rtmp://liveroom.ds.com/live/testroom12016-11-03T17-04-15-878
+
+http://liveroom.ds.com:8080/live/testroom12016-11-03T17-04-15-878.flv
+
+http://room.dfsxcms.cn:8080/live/live12016-11-04T17-49-19-776.flv
+
+乐山
+https://modao.cc/app/axqaOvnrTZoQaded2fJ4LPFlSwnnaNy
+
+间:testroom1,testroom2,testroom3
+用户:liuwenbo1,liuwenbo2,liuwenbo3
+用户密码与用户名相同
+
+rtmp://192.168.6.204:1935/live/test
+http://192.168.6.204:8080/live/test.flv
+
+svn://192.168.2.3/App/wenshan/android/branches
+
+http://192.168.6.2:9000/proxy.pac
+
+jni头文件生成命令。 在class所在的文件夹下执行：
+javah -jni io.github.yanbober.ndkapplication.NdkJniUtils（包名.类名）
+
+svn://192.168.2.3/App/wenshan/android/jisuyun/branches/yscms
+
+svn://192.168.2.3/ilive 直播SVN
+
+svn://192.168.2.3/App/android/debug/libstreaming_all  控制视频编码传输
+
+RTMP
+
+liuwenbo 
+123456
+
+"App Key：203821799
+App Secret：b81d69a5dd6da3866c3c5615aea55652
+状态：审核中
+测试账号：caiinc@163.com, caiinc"
+
+qq
+"App Key：1104947243
+App Secret：iLVYHWMgmWO6I18v
+状态：审核中
+测试账号：3296973218, dfsx.12345"
+
+wx
+"AppID：wx2056eea68b18c5d7
+AppSecret：4ae9a124159057d459b4187747fd3ebf
+状态：已审核"
+----------------------------------------------------
+android 6.0 (API 23) 之后找不到apache包的解决方案
+android {
+    useLibrary 'org.apache.http.legacy'
+}
+----------------------------------------------------
+JDK8 找不到java.lang.invoke.MethodType的类文件 的解决方案
+
+classpath 'me.tatarka:gradle-retrolambda:3.2.3'
+apply plugin: 'me.tatarka.retrolambda'
+----------------------------------------------------
+
+https://github.com/humemarx/GameMap
+
+----------------------------------------------------
+GSON解析常用：
+https://github.com/google/gson/blob/master/UserGuide.md#TOC-Array-Examples
+对象转换样例
+Object Examples
+
+class BagOfPrimitives {
+  private int value1 = 1;
+  private String value2 = "abc";
+  private transient int value3 = 3;
+  BagOfPrimitives() {
+    // no-args constructor
+  }
+}
+
+// Serialization
+BagOfPrimitives obj = new BagOfPrimitives();
+Gson gson = new Gson();
+String json = gson.toJson(obj);  
+
+// ==> json is {"value1":1,"value2":"abc"}
+Note that you can not serialize objects with circular references since that will result in infinite recursion.
+
+// Deserialization
+BagOfPrimitives obj2 = gson.fromJson(json, BagOfPrimitives.class);
+// ==> obj2 is just like obj
+
+数组转换样例
+Gson gson = new Gson();
+int[] ints = {1, 2, 3, 4, 5};
+String[] strings = {"abc", "def", "ghi"};
+
+// Serialization
+gson.toJson(ints);     // ==> [1,2,3,4,5]
+gson.toJson(strings);  // ==> ["abc", "def", "ghi"]
+
+// Deserialization
+int[] ints2 = gson.fromJson("[1,2,3,4,5]", int[].class); 
+// ==> ints2 will be same as ints
+集合转换样例
+Gson gson = new Gson();
+Collection<Integer> ints = Lists.immutableList(1,2,3,4,5);
+
+// Serialization
+String json = gson.toJson(ints);  // ==> json is [1,2,3,4,5]
+
+// Deserialization
+Type collectionType = new TypeToken<Collection<Integer>>(){}.getType();
+Collection<Integer> ints2 = gson.fromJson(json, collectionType);
+// ==> ints2 is same as ints
+
+----------------------------------------------------
+内存检测工具
+debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+----------------------------------------------------
+
+
+No.	文字表記	10進表記	16進表記	文字	 	Comment
+001	&quot;	&#34;	&#x22;	"""	 	quotation mark = APL quote
+002	&amp;	&#38;	&#x26;	"&"	 	ampersand
+003	&lt;	&#60;	&#x3C;	"<"	 	less-than sign
+004	&gt;	&#62;	&#x3E;	">"	 	greater-than sign
+005	&nbsp;	&#160;	&#xA0;	" "	 	no-break space = non-breaking space
+-----------------------------------------------------
+
+试试这个，能解决国内访问Google服务器的困难
+启动 Android SDK Manager ，打开主界面，依次选择「Tools」、「Options...」，弹出『Android SDK Manager - Settings』窗口；
+在『Android SDK Manager - Settings』窗口中，在「HTTP Proxy Server」和「HTTP Proxy Port」输入框内填入mirrors.neusoft.edu.cn和80，并且选中「Force https://... sources to be fetched using http://...」复选框。设置完成后单击「Close」按钮关闭『Android SDK Manager - Settings』窗口返回到主界面；
+依次选择「Packages」、「Reload」
+
+----------------------------------------------------
+rtmp://live.hkstv.hk.lxdns.com:1935/live/stream123
+
+rtmp://192.168.6.62/live/?vhost=room.dfsxcms.cn/live62016-11-09T16-47-33-063
+
+http://room.dfsxcms.cn:80/live/live62016-11-09T16-47-33-063.flv
+
+http://room.dfsxcms.cn/live/live62016-11-09T16-24-56-152.flv
+
+1.	主播发送创建直播流请求。消息格式如下：
+<iq from="{full jid of sender}" id="{iq id}" to="{room jid}" type="set">
+	<create xmlns="http://www.ds.net.cn/live/xmpp#stream">
+     <subject>   dfsxsubject   </subject> 
+     <coverUrl>  coverPath    </coverUrl> 
+</create>
+</iq>
+2.	IM服务器生成直播流地址，将直播流地址和主播进行绑定并记录下来，最后将生成的地址返回给主播。
+3.	主播收到直播流地址，连接到流媒体服务器，并开始推送流媒体。
+4.	流媒体服务器收到推送请求，向IM服务器询问该用户是否有权推送流到该地址。IM服务器收到询问，检查地址是否和该推送人已绑定，如果是，返回允许推送的响应。
+5.	流媒体服务器开始接收流，并通知IM服务器流媒体已经开始。
+6.	IM服务器通知API服务器演出已开始。
+7.	IM服务器向聊天室所有成员广播直播流地址。
+<message from="{room jid}" to="{full jid of receiver}">
+	<stream xmlns="http://www.ds.net.cn/live/xmpp#stream">
+		 <state>started|stopped</state>
+		<address>{stream address}</address>
+     <subject>   dfsxsubject   </subject> 
+     <coverUrl>  coverUrl    </coverUrl> 
+	 
+--------------------------------------------------
+新媒体互动平台（乐山）文档共享地址：
+\\zhouxi\nmip-document
+\\zhouxi\nmip2.0-document
+账号：guest
+密码：guest
+
+http://192.168.6.117:8080/lsadmin/        admin dfsx.12345
+-------------------------------------------------
+DNS 192.168.6.2
+菜单 》 设置 》 显示高级设置 》 更改代理服务器设置 》 局域网设置，设置自动配置脚本为：http://192.168.6.2:9000/proxy.pac
+公司新增翻墙代理，找各位测试下，设置方式：http://192.168.6.2:9000/gfw-settings.html。由于带宽有限以及vpn服务质量可能不稳定，请大家严格遵守以下规定：
+1. 翻墙仅供浏览网页使用，严禁将该翻墙代理设置到全局代理软件如proxifier中。
+2. 由于带宽有限，尽量少些下载大文件、长时间观看视频等耗费带宽的操作。
+---------------------------------------------------
+11-10 13:58:40.996 2608-3579/com.dfsx.lscms E/librtmpclient: WriteN, RTMP send error 104 (32 bytes)
+11-10 13:58:40.997 2608-3579/com.dfsx.lscms E/librtmpclient: WriteN, RTMP send error 32 (63 bytes)
+11-10 13:58:40.998 2608-3579/com.dfsx.lscms E/librtmpclient: WriteN, RTMP send error 9 (42 bytes)
+
+---------------------------------------------------
+
+【东方盛行】根据国家税务总局公告2017年第16号文件：自2017年7月1日起，企业索取增值税普通发票（定额发票除外），应向开票方提供公司全称及纳税人识别号，即：员工报销用的发票必须有公司全称和税号，否则不予报销。公司全称：成都东方盛行电子有限责任公司，公司税号：9151010072536213X8。
+
+
+Idea 工程导入 报错 “设备未就绪” ------- 解决方案是 工程的local.properties文件错误。修改即可
+
+---------------------------------------------------
+代码规范：
+
+C++: http://192.168.6.206/resource/code-style/cc/
+C#: http://192.168.6.206/resource/code-style/cs/
+Java: http://192.168.6.206/resource/code-style/java/
+Swift: http://192.168.6.206/resource/code-style/swift/
+html/css/js: http://192.168.6.206/resource/code-style/web/
+注：请查看各自的readme.md了解各个文件的说明。
+
+---------------------------------------------------
+
+绿春台的安卓APP
+
+---------------------------------------------------
+
+将build.gralde
+
+repositories {
+    mavenCentral()
+}
+换成
+
+allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
+}
+
+可以提高gradle下载插件的速度
+----------------------------------------------------
+
+乐山2.0后端网址http://www.baview.cn:8011/lsadmin
+
+
+
+
+1、整体比例偏大（请参考原设计图）
+2、抬头栏偏大（请参考原设计图）
+3、功能界面整体字体过大。
+4、缩略图整体偏大。
+5、直播栏图片与字体无法区分（图片显示方式请参考原设计图。）
+6、精品栏栏目图片拉伸严重。（请从设计图源文件中选取）
+7、爆料栏头像部分过大，影响整体协调。
+8、新闻推送及护眼模式开关设计样式请参考原设计图。
+9、护眼模式请参考夜间模式来做。
+10、上拉到底，下拉到底的显示方式过于普通，用整体向下以及整体向上的方式显得更加有动感以及美观。
+
+-------------------------------------------------
+
+http://m.baview.cn:8011
+
+
+-------------------------------------------------
+
+UI 共享文件夹
+
+\\192.168.2.3\产品部\新媒体\西双版纳APP
+ID  pm
+KEY pm12345 
+
+-------------------------------------------------
+
+版纳的地址：
+http://112.116.48.194:7001/api/public/settings
+
+--------------------------------------
+
+达州 
+有赞云client_id：7c77a0f18a0b202881
+有赞云client_secret: 31d4e01b810523104096b3822433419e
+
+https://www.youzanyun.com/docs/guide/3400/3405
+
+-----------------------------------------------------
+测试环境 30 ---- http://192.168.6.30:8001
+
+msadmin.baview.cn:8011 巴视后台地址
+
+api.baview.cn:8011
+
+-----------------------------------------------------
+
+192.168.6.25:9000
+
+-----------------------------------------------------
+
+下载ArcFace v1.1 平台: Android - 人脸比对(1:1) 文件大小： 版本： v1.1
+
+APP_Id
+3r7ioxziL9oNKhJiGVBns9j4NVWLs3FQR9RtQWYrPUpS
+
+SDK_key:
+人脸追踪(FT) Key  A6CPSkrMyeQUAcvxMPADT3XpcDgFzyyb5HJSUfzb2LZz
+
+人脸检测(FD) Key  A6CPSkrMyeQUAcvxMPADT3XwmcwPq5nSxtSKq8n2kTMn
+
+人脸识别(FR) Key  A6CPSkrMyeQUAcvxMPADT3Y4w2CdgHUS49aZN2xZfwM8
+
+年龄识别(Age) Key  A6CPSkrMyeQUAcvxMPADT3Ygk2WTRA6uMkTP9Sw9aHi7
+
+性别识别(Gender) Key  A6CPSkrMyeQUAcvxMPADT3YouRmaq25HB5SpbbSQfBwE
+
+-------------------------------------------------------------
+https://lanhuapp.com/url/N8fTS
+
+-------------------------------------------------------------
+
+泸州的极速融通环境搭建好了
+192.168.6.44:6062
+admin
+dfsx.123456
+--------------------------------------------------------------
+maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter/'
+        }
+
+        maven { url "https://jitpack.io" }
+
+        maven { url "https://maven.google.com" }
+
+--------------------------------------------------------------
+office 激活 路劲：F:\迅雷下载\Minikms_V1.2_XiTongZhiJia\
+----------------------------------------------------------------
+
+泸定：李思科、刘文波
+九龙：李思科、刘文波
+稻城：李思科、刘文波
+----------------------
+
+adb shell monkey –p com.dfsx.lscms –-throttle 100 –-pct-touch 50 –-pct-motion 50 –v –v 10000 >F:\WORK\Android_Test\monkeytest\monkey.txt
+
+adb shell monkey -p com.xy.android.junit -s 500 --ignore-crashes --ignore-timeouts --monitor-native-crashes -v -v 10000 > E:\monkey_log\java_monkey_log.txt
+
+退出应用和拔掉数据线，都无法停止monkey测试，如需停止monkey测试，输入如下命令：
+adb shell 进入 控制平台
+ps | grep monkey
+返回来的数字，即是monkey的进程号
+kill 命令结束进程继续输入
+-----------------------
+
+vcpkg 常用命令:
+
+vcpkg list
+
+vcpkg install xxx
+
+vcpkg integrate install
+
+-----------------------------

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535">
+
+    <include layout="@layout/edit_media_title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/media_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="295dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/edit_media_tools_bar"/>
+
+            <com.dfsx.videoeditor.widget.timeline.TimeLineView
+                android:id="@+id/time_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#242424"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

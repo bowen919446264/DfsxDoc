@@ -1,0 +1,17 @@
+"C:\Program Files\JetBrains\CLion 2018.1.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE= -TARGET_OS=Andriod -G "CodeBlocks - NMake Makefiles" F:\WORK\Android_SPACE\Lib\xedit\trunk\src
+CMake Error in CMakeLists.txt:
+  Generator
+
+    NMake Makefiles
+
+  does not support toolset specification, but toolset
+
+    ARGET_OS=Andriod
+
+  was specified.
+
+
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
+See also "F:/WORK/Android_SPACE/Lib/xedit/trunk/src/cmake-build-default/CMakeFiles/CMakeOutput.log".
